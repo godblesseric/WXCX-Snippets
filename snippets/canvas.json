@@ -1,0 +1,464 @@
+{
+    "cvs-getContext": {
+        "prefix": "cvs-getContext",
+        "body": [
+            "var ${1:ctx} = null;",
+            "var ${2:canvas} = document.getElementById('${3}');",
+            "if (${2:canvas}.getContext){",
+            "${1:ctx} = ${2:canvas}.getContext('2d');",
+            "} else {",
+            "}"
+        ],
+        "description": "获得渲染上下文"
+    },
+    "cvs-toDataURL": {
+        "prefix": "cvs-toDataURL",
+        "body": "canvas.toDataURL(${1:type}, ${2:encoderOptions});",
+        "description": "创建图片"
+    },
+    "cvs-toDataURL-default": {
+        "prefix": "cvs-toDataURL-default",
+        "body": "canvas.toDataURL();",
+        "description": "默认创建一个PNG图片"
+    },
+    "cvs-toBlob": {
+        "prefix": "cvs-toBlob",
+        "body": "canvas.toBlob(${1:callback}, ${2:type}, ${3:encoderOptions});",
+        "description": "创建了一个在画布中的代表图片的Blob对象"
+    },
+    "cvs-toBlob－defult": {
+        "prefix": "cvs-toBlob－defult",
+        "body": "canvas.toBlob(${1:callback});",
+        "description": "创建了一个在画布中的代表PNG图片的Blob对象"
+    },
+    "cvs-toBlob－download": {
+        "prefix": "cvs-toBlob－download",
+        "body": [
+            "function (blob) {",
+            "var url = URL.createObjectURL(blob);",
+            "var a = document.createElement(\"a\");",
+            "a.textContent = \"Download\";",
+            "document.body.appendChild(a);",
+            "a.href = url;",
+            "}"
+        ],
+        "description": "生成下载链接"
+    },
+    "cvs-canvas": {
+        "prefix": "cvs-canvas",
+        "body": "ctx.canvas;",
+        "description": "canvas反向引用"
+    },
+    "cvs-rect": {
+        "prefix": "cvs-rect",
+        "body": "ctx.rect(${1:x}, ${2:y}, ${3:width}, ${4:height});",
+        "description": "绘制一个左上角坐标为（x,y），宽高为width以及height的矩形。"
+    },
+    "cvs-fillRect": {
+        "prefix": "cvs-fillRect",
+        "body": "ctx.fillRect(${1:x}, ${2:y}, ${3:width}, ${4:height});",
+        "description": "绘制一个填充的矩形"
+    },
+    "cvs-strokeRect": {
+        "prefix": "cvs-strokeRect",
+        "body": "ctx.strokeRect(${1:x}, ${2:y}, ${3:width}, ${4:height});",
+        "description": "绘制一个矩形的边框"
+    },
+    "cvs-clearRect": {
+        "prefix": "cvs-clearRect",
+        "body": "ctx.clearRect(${1:x}, ${2:y}, ${3:width}, ${4:height});",
+        "description": "清除指定矩形区域，让清除部分完全透明。"
+    },
+    "cvs-beginPath": {
+        "prefix": "cvs-beginPath",
+        "body": "ctx.beginPath();",
+        "description": "新建一条路径，生成之后，图形绘制命令被指向到路径上生成路径。"
+    },
+    "cvs-closePath": {
+        "prefix": "cvs-closePath",
+        "body": "ctx.closePath();",
+        "description": "闭合路径之后图形绘制命令又重新指向到上下文中。"
+    },
+    "cvs-stroke": {
+        "prefix": "cvs-stroke",
+        "body": "ctx.stroke();",
+        "description": "通过线条来绘制图形轮廓。"
+    },
+    "cvs-fill": {
+        "prefix": "cvs-fill",
+        "body": "ctx.fill();",
+        "description": "通过填充路径的内容区域生成实心的图形。"
+    },
+    "cvs-fill-fillRule": {
+        "prefix": "cvs-fill-fillRule",
+        "body": "ctx.fill(${1:fillRule});",
+        "description": ""
+    },
+    "cvs-fill-path": {
+        "prefix": "cvs-fill-path",
+        "body": "ctx.fill(${1:path}, ${2:fillRule});",
+        "description": ""
+    },
+    "cvs-moveTo": {
+        "prefix": "cvs-moveTo",
+        "body": "ctx.moveTo(${1:x}, ${2:y});",
+        "description": "将笔触移动到指定的坐标x以及y上。"
+    },
+    "cvs-lineTo": {
+        "prefix": "cvs-lineTo",
+        "body": "ctx.lineTo(${1:x}, ${2:y});",
+        "description": "绘制一条从当前位置到指定x以及y位置的直线。"
+    },
+    "cvs-arc": {
+        "prefix": "cvs-arc",
+        "body": "ctx.arc(${1:x}, ${2:y}, ${3:radius}, ${4:startAngle}, ${5:endAngle}${6:, ${7:anticlockwise}});",
+        "description": "画一个以（x,y）为圆心的以radius为半径的圆弧（圆），从startAngle开始到endAngle结束，按照anticlockwise给定的方向（默认为顺时针）来生成。"
+    },
+    "cvs-arcTo": {
+        "prefix": "cvs-arcTo",
+        "body": "ctx.arcTo(${1:x1}, ${2:y1}, ${3:x2}, ${4:y2}, ${5:radius});",
+        "description": "根据给定的控制点和半径画一段圆弧，再以直线连接两个控制点。"
+    },
+    "cvs-quadraticCurveTo": {
+        "prefix": "cvs-quadraticCurveTo",
+        "body": "ctx.quadraticCurveTo(${1:cpx}, ${2:cpy}, ${3:x}, ${4:y});",
+        "description": "绘制贝塞尔曲线，cpx,cpy为控制点，x,y为结束点。"
+    },
+    "cvs-bezierCurveTo": {
+        "prefix": "cvs-bezierCurveTo",
+        "body": "ctx.bezierCurveTo(${1:cpx}, ${2:cpy}, ${3:cp2x}, ${4:cp2y}, ${5:x}, ${6:y});",
+        "description": "绘制二次贝塞尔曲线，cpx,cpy为控制点一，cp2x,cp2y为控制点二，x,y为结束点。"
+    },
+    "cvs-Path2D": {
+        "prefix": "cvs-Path2D",
+        "body": "var ${1:path2D} = new Path2D(${2});",
+        "description": ""
+    },
+    "cvs-addPath": {
+        "prefix": "cvs-addPath",
+        "body": "${1:path2D}.addPath(${2:path}, ${3:transform})​",
+        "description": "添加了一条路径到当前路径（可能添加了一个变换矩阵）。"
+    },
+    "cvs-fillStyle-color": {
+        "prefix": "cvs-fillStyle-color",
+        "body": "ctx.fillStyle = '${1:color}';",
+        "description": "颜色"
+    },
+    "cvs-fillStyle-gradient": {
+        "prefix": "cvs-fillStyle-gradient",
+        "body": "ctx.fillStyle = gradient;",
+        "description": "线性渐变或者放射性渐变"
+    },
+    "cvs-fillStyle-pattern": {
+        "prefix": "cvs-fillStyle-pattern",
+        "body": "ctx.fillStyle = pattern;",
+        "description": "可重复图像"
+    },
+    "cvs-strokeStyle-color": {
+        "prefix": "cvs-strokeStyle-color",
+        "body": "ctx.strokeStyle = '${1:color}';",
+        "description": "颜色"
+    },
+    "cvs-strokeStyle-gradient": {
+        "prefix": "cvs-strokeStyle-gradient",
+        "body": "ctx.strokeStyle = -gradient;",
+        "description": "线性渐变或者放射性渐变"
+    },
+    "cvs-strokeStyle-pattern": {
+        "prefix": "cvs-strokeStyle-pattern",
+        "body": "ctx.strokeStyle = pattern;",
+        "description": "可重复图像"
+    },
+    "cvs-globalAlpha": {
+        "prefix": "cvs-globalAlpha",
+        "body": "ctx.globalAlpha = ${1:transparencyValue};",
+        "description": "这个属性影响到 canvas 里所有图形的透明度，有效的值范围是 0.0 （完全透明）到 1.0（完全不透明），默认是 1.0。"
+    },
+    "cvs-lineWidth": {
+        "prefix": "cvs-lineWidth",
+        "body": "ctx.lineWidth = ${1:value};",
+        "description": "设置线条宽度。属性值必须为正数。默认值是1.0。"
+    },
+    "cvs-lineCap": {
+        "prefix": "cvs-lineCap",
+        "body": "ctx.lineCap = '${1:type}';",
+        "description": "设置线条末端样式。它可以为下面的三种的其中之一：butt，round 和 square。默认是 butt。"
+    },
+    "cvs-lineJoin": {
+        "prefix": "cvs-lineJoin",
+        "body": "ctx.lineJoin = '${1:type}';",
+        "description": "设定线条与线条间接合处的样式。它可以是这三种之一：round, bevel 和 miter。默认是 miter。"
+    },
+    "cvs-miterLimit": {
+        "prefix": "cvs-miterLimit",
+        "body": "ctx.miterLimit = ${1:value};",
+        "description": "限制当两条线相交时交接处最大长度；所谓交接处长度（斜接长度）是指线条交接处内角顶点到外角顶点的长度。"
+    },
+    "cvs-getLineDash": {
+        "prefix": "cvs-getLineDash",
+        "body": "ctx.getLineDash();",
+        "description": "返回一个包含当前虚线样式，长度为非负偶数的数组。"
+    },
+    "cvs-setLineDash": {
+        "prefix": "cvs-setLineDash",
+        "body": "ctx.setLineDash(${1:segments});",
+        "description": "设置当前虚线样式。"
+    },
+    "cvs-lineDashOffset": {
+        "prefix": "cvs-lineDashOffset",
+        "body": "ctx.lineDashOffset = ${1:value};",
+        "description": "设置虚线样式的起始偏移量。"
+    },
+    "cvs-createLinearGradient": {
+        "prefix": "cvs-createLinearGradient",
+        "body": "var gradient = ctx.createLinearGradient(${1:x1}, ${2:y1}, ${3:x2}, ${4:y2});",
+        "description": "createLinearGradient 方法接受 4 个参数，表示渐变的起点 (x1,y1) 与终点 (x2,y2)。"
+    },
+    "cvs-createRadialGradient": {
+        "prefix": "cvs-createRadialGradient",
+        "body": "var gradient = ctx.createRadialGradient(${1:x1}, ${2:y1}, ${3:r1}, ${4:x2}, ${5:y2}, ${6:r2});",
+        "description": "createRadialGradient 方法接受 6 个参数，前三个定义一个以 (x1,y1) 为原点，半径为 r1 的圆，后三个参数则定义另一个以 (x2,y2) 为原点，半径为 r2 的圆。"
+    },
+    "cvs-addColorStop": {
+        "prefix": "cvs-addColorStop",
+        "body": "gradient.addColorStop(${1:position}, ${2:color});",
+        "description": "addColorStop 方法接受 2 个参数，position 参数必须是一个 0.0 与 1.0 之间的数值，表示渐变中颜色所在的相对位置。例如，0.5 表示颜色会出现在正中间。color 参数必须是一个有效的 CSS 颜色值（如 #FFF， rgba(0,0,0,1)，等等）。"
+    },
+    "cvs-createPattern": {
+        "prefix": "cvs-createPattern",
+        "body": "ctx.createPattern(${1:image}, ${2:type});",
+        "description": "该方法接受两个参数。Image 可以是一个 Image 对象的引用，或者另一个 canvas 对象。Type 必须是下面的字符串值之一：repeat，repeat-x，repeat-y 和 no-repeat。"
+    },
+    "cvs-shadowOffsetX": {
+        "prefix": "cvs-shadowOffsetX",
+        "body": "ctx.shadowOffsetX = ${1:float};",
+        "description": "shadowOffsetX 和 shadowOffsetY 用来设定阴影在 X 和 Y 轴的延伸距离，它们是不受变换矩阵所影响的。负值表示阴影会往上或左延伸，正值则表示会往下或右延伸，它们默认都为 0。"
+    },
+    "cvs-shadowOffsetY": {
+        "prefix": "cvs-shadowOffsetY",
+        "body": "ctx.shadowOffsetY = ${1:float};",
+        "description": "shadowOffsetX 和 shadowOffsetY 用来设定阴影在 X 和 Y 轴的延伸距离，它们是不受变换矩阵所影响的。负值表示阴影会往上或左延伸，正值则表示会往下或右延伸，它们默认都为 0。"
+    },
+    "cvs-shadowBlur": {
+        "prefix": "cvs-shadowBlur",
+        "body": "ctx.shadowBlur = ${1:float};",
+        "description": "shadowBlur 用于设定阴影的模糊程度，其数值并不跟像素数量挂钩，也不受变换矩阵的影响，默认为 0。"
+    },
+    "cvs-shadowColor": {
+        "prefix": "cvs-shadowColor",
+        "body": "ctx.shadowColor = ${1:color};",
+        "description": "shadowColor 是标准的 CSS 颜色值，用于设定阴影颜色效果，默认是全透明的黑色。"
+    },
+    "cvs-fillText": {
+        "prefix": "cvs-fillText",
+        "body": "ctx.fillText(${1:text}, ${2:x}, ${3:y}${4:, ${5:maxWidth}});",
+        "description": "在指定的(x,y)位置填充指定的文本，绘制的最大宽度是可选的."
+    },
+    "cvs-strokeText": {
+        "prefix": "cvs-strokeText",
+        "body": "ctx.strokeText(${1:text}, ${2:x}, ${3:y}${4:, ${5:maxWidth}});",
+        "description": "在指定的(x,y)位置绘制文本边框，绘制的最大宽度是可选的."
+    },
+    "cvs-font": {
+        "prefix": "cvs-font",
+        "body": "ctx.font = '${1:value}';",
+        "description": "当前我们用来绘制文本的样式. 这个字符串使用和 CSS font 属性相同的语法. 默认的字体是 10px sans-serif。"
+    },
+    "cvs-textAlign": {
+        "prefix": "cvs-textAlign",
+        "body": "ctx.textAlign = '${1:value}';",
+        "description": "文本对齐选项. 可选的值包括：start, end, left, right or center. 默认值是 start。"
+    },
+    "cvs-textBaseline": {
+        "prefix": "cvs-textBaseline",
+        "body": "ctx.textBaseline = '${1:value}';",
+        "description": "基线对齐选项. 可选的值包括：top, hanging, middle, alphabetic, ideographic, bottom。默认值是 alphabetic。"
+    },
+    "cvs-direction": {
+        "prefix": "cvs-direction",
+        "body": "ctx.direction = '${1:value}';",
+        "description": "文本方向。可能的值包括：ltr, rtl, inherit。默认值是 inherit。"
+    },
+    "cvs-measureText": {
+        "prefix": "cvs-measureText",
+        "body": "var textMetrics = ctx.measureText('${1:text}');",
+        "description": "将返回一个 TextMetrics对象的宽度、所在像素，这些体现文本特性的属性。"
+    },
+    "cvs-drawImage": {
+        "prefix": "cvs-drawImage",
+        "body": "ctx.drawImage(${1:image}, ${2:x}, ${3:y});",
+        "description": "其中 image 是 image 或者 canvas 对象，x 和 y 是其在目标 canvas 里的起始坐标。"
+    },
+    "cvs-drawImage-Scaling": {
+        "prefix": "cvs-drawImage-Scaling",
+        "body": "ctx.drawImage(${1:image}, ${2:x}, ${3:y}, ${4:width}, ${5:height});",
+        "description": "这个方法多了2个参数：width 和 height，这两个参数用来控制 当像canvas画入时应该缩放的大小"
+    },
+    "cvs-drawImage-Slicing": {
+        "prefix": "cvs-drawImage-Slicing",
+        "body": "ctx.drawImage(${1:image}, ${2:sx}, ${3:sy}, ${4:sWidth}, ${5:sHeight}, ${6:dx}, ${7:dy}, ${8:dWidth}, ${9:dHeight});",
+        "description": "第一个参数和其它的是相同的，都是一个图像或者另一个 canvas 的引用。其它8个参数最好是参照右边的图解，前4个是定义图像源的切片位置和大小，后4个则是定义切片的目标显示位置和大小。"
+    },
+    "cvs-save": {
+        "prefix": "cvs-save",
+        "body": "ctx.save();",
+        "description": "保存 canvas 状态"
+    },
+    "cvs-restore": {
+        "prefix": "cvs-restore",
+        "body": "ctx.restore();",
+        "description": "恢复 canvas 状态"
+    },
+    "cvs-translate": {
+        "prefix": "cvs-translate",
+        "body": "ctx.translate(${1:x}, ${2:y});",
+        "description": "translate 方法接受两个参数。x 是左右偏移量，y 是上下偏移量"
+    },
+    "cvs-rotate": {
+        "prefix": "cvs-rotate",
+        "body": "ctx.rotate(${1:angle});",
+        "description": "这个方法只接受一个参数：旋转的角度(angle)，它是顺时针方向的，以弧度为单位的值。"
+    },
+    "cvs-scale": {
+        "prefix": "cvs-scale",
+        "body": "ctx.scale(${1:x}, ${2:y});",
+        "description": "scale 方法接受两个参数。x,y 分别是横轴和纵轴的缩放因子，它们都必须是正值。值比 1.0 小表示缩小，比 1.0 大则表示放大，值为 1.0 时什么效果都没有。"
+    },
+    "cvs-transform": {
+        "prefix": "cvs-transform",
+        "body": "ctx.transform(${1:a}, ${2:b}, ${3:c}, ${4:d}, ${5:e}, ${6:f});",
+        "description": "使用矩阵多次叠加当前变换的方法，矩阵由方法的参数进行描述。你可以缩放、旋转、移动和倾斜上下文。"
+    },
+    "cvs-setTransform": {
+        "prefix": "cvs-setTransform",
+        "body": "ctx.setTransform(${1:a}, ${2:b}, ${3:c}, ${4:d}, ${5:e}, ${6:f});",
+        "description": "这个方法必须重置当前的变形矩阵为单位矩阵，然后以相同的参数调用 transform 方法。如果任意一个参数是无限大，那么变形矩阵也必须被标记为无限大，否则会抛出异常。"
+    },
+    "cvs-globalCompositeOperation": {
+        "prefix": "cvs-globalCompositeOperation",
+        "body": "ctx.globalCompositeOperation = '${1:type}';",
+        "description": "组合\nsource-over (default):这是默认设置，新图形会覆盖在原有内容之上。\ndestination-over:会在原有内容之下绘制新图形。\nsource-in:新图形会仅仅出现与原有内容重叠的部分。其它区域都变成透明的。\ndestination-in:原有内容中与新图形重叠的部分会被保留，其它区域都变成透明的。\nsource-out:结果是只有新图形中与原有内容不重叠的部分会被绘制出来。\ndestination-out:原有内容中与新图形不重叠的部分会被保留。\nsource-atop:新图形中与原有内容重叠的部分会被绘制，并覆盖于原有内容之上。\ndestination-atop:原有内容中与新内容重叠的部分会被保留，并会在原有内容之下绘制新图形\nlighter:两图形中重叠部分作加色处理。\ndarker:两图形中重叠的部分作减色处理。\nxor:重叠的部分会变成透明。\ncopy:只有新图形会被保留，其它都被清除掉。"
+    },
+    "cvs-clip": {
+        "prefix": "cvs-clip",
+        "body": "ctx.clip();",
+        "description": "创建一个新的裁切路径。默认情况下，canvas 有一个与它自身一样大的裁切路径（也就是没有裁切效果）"
+    },
+    "cvs-clip-fillRule": {
+        "prefix": "cvs-clip-fillRule",
+        "body": "ctx.clip(fillRule);",
+        "description": ""
+    },
+    "cvs-clip-path": {
+        "prefix": "cvs-clip-path",
+        "body": "ctx.clip(path, fillRule);",
+        "description": ""
+    },
+    "cvs-requestAnimationFrame": {
+        "prefix": "cvs-requestAnimationFrame",
+        "body": "window.requestAnimationFrame(${1:callback});",
+        "description": "告诉浏览器你希望执行一个动画，并在重绘之前，请求浏览器执行一个特定的函数来更新动画。"
+    },
+    "cvs-setInterval": {
+        "prefix": "cvs-setInterval",
+        "body": "setInterval(${1:function}, ${2:delay});",
+        "description": "当设定好间隔时间后，function会定期执行。"
+    },
+    "cvs-setTimeout": {
+        "prefix": "cvs-setTimeout",
+        "body": "setTimeout(${1:function}, ${2:delay});",
+        "description": "在设定好的时间之后执行函数"
+    },
+    "cvs-createImageData": {
+        "prefix": "cvs-createImageData",
+        "body": "var imageData = ctx.createImageData(${1:width}, ${2:height});",
+        "description": "创建了一个新的具体特定尺寸的ImageData对像。所有像素被预设为透明黑。"
+    },
+    "cvs-createImageData-anotherImageData": {
+        "prefix": "cvs-createImageData-anotherImageData",
+        "body": "var imageData = ctx.createImageData(${1:anotherImageData});",
+        "description": "创建一个被anotherImageData对像指定的相同像素的ImageData对像。这个新的对像像素全部被预设为透明黑。这个并非复制了图片数据。"
+    },
+    "cvs-getImageData": {
+        "prefix": "cvs-getImageData",
+        "body": "var imageData = ctx.getImageData(${1:x}, ${2:y}, ${3:width}, ${4:height});",
+        "description": "获得一个包含画布场景像素数据的ImageData对像"
+    },
+    "cvs-gray": {
+        "prefix": "cvs-gray",
+        "body": [
+            "var imageData = ctx.getImageData(${1:x}, ${2:y}, ${3:width}, ${4:height});",
+            "var aPix = imageData.data;",
+            "var nPixLen = aPix.length;",
+            "for (var nPixel = 0; nPixel < nPixLen; nPixel += 4) {",
+            "aPix[nPixel] = aPix[nPixel + 1] = aPix[nPixel + 2] = (aPix[nPixel] + aPix[nPixel + 1] + aPix[nPixel + 2]) / 3;",
+            "}",
+            "ctx.putImageData(imageData, ${1:x}, ${2:y});"
+        ],
+        "description": "灰化"
+    },
+    "cvs-putImageData": {
+        "prefix": "cvs-putImageData",
+        "body": "ctx.putImageData(${1:imageData}, ${2:dx}, ${3:dy});",
+        "description": "对场景进行像素数据的写入"
+    },
+    "cvs-putImageData-dirty": {
+        "prefix": "cvs-putImageData-dirty",
+        "body": "ctx.putImageData(${1:imageData}, ${2:dx}, ${3:dy}, ${4:dirtyX}, ${5:dirtyY}, ${6:dirtyWidth}, ${7:dirtyHeight});",
+        "description": ""
+    },
+    "cvs-imageSmoothingEnabled": {
+        "prefix": "cvs-imageSmoothingEnabled",
+        "body": "ctx.imageSmoothingEnabled = ${1:bool};",
+        "description": "反锯齿"
+    },
+    "cvs-offscreenCanvas": {
+        "prefix": "cvs-offscreenCanvas",
+        "body": "var offscreenCanvas = document.createElement('canvas');",
+        "description": "离屏canvas"
+    },
+    "cvs-drawFocusIfNeeded": {
+        "prefix": "cvs-drawFocusIfNeeded",
+        "body": "ctx.drawFocusIfNeeded(${1:element});",
+        "description": "给当前路径或特定路径绘制焦点的方法，如果给定的元素获取了焦点。"
+    },
+    "cvs-isPointInStroke": {
+        "prefix": "cvs-isPointInStroke",
+        "body": "ctx.isPointInStroke(${1:x}, ${2:y});",
+        "description": "检测某点是否在路径的描边线上的方法。"
+    },
+    "cvs-isPointInStroke-path": {
+        "prefix": "cvs-isPointInStroke-path",
+        "body": "ctx.isPointInStroke(${1:path}, ${2:x}, ${3:y});",
+        "description": ""
+    },
+    "cvs-isPointInPath": {
+        "prefix": "cvs-isPointInPath",
+        "body": "ctx.isPointInPath(${1:x}, ${2:y});",
+        "description": "判断在当前路径中是否包含检测点的方法。"
+    },
+    "cvs-isPointInPath-fillRule": {
+        "prefix": "cvs-isPointInPath-fillRule",
+        "body": "ctx.isPointInPath(${1:x}, ${2:y}, ${3:fillRule});",
+        "description": ""
+    },
+    "cvs-isPointInPath-path": {
+        "prefix": "cvs-isPointInPath-path",
+        "body": "ctx.isPointInPath(${1:path}, ${2:x}, ${3:y});",
+        "description": ""
+    },
+    "cvs-isPointInPath-path-fillRule": {
+        "prefix": "cvs-isPointInPath-fillRulepath-",
+        "body": "ctx.isPointInPath(${1:path}, ${2:x}, ${3:y}, ${4:fillRule});",
+        "description": ""
+    },
+    "cvs-createImageBitmap": {
+        "prefix": "cvs-createImageBitmap",
+        "body": [
+            "createImageBitmap(${1:image}, ${2:sx}, ${3:sy}, ${4:sw}, ${5:sh}${6:, options}).then(function (response) {",
+            "ctx.drawImage(response, ${2:sx}, ${3:sy});",
+            "});"
+        ],
+        "description": "可以从多种源中生成。 ImageBitmap提供了一种异步且高资源利用率的方式来为WebGL的渲染准备基础结构"
+    }
+}

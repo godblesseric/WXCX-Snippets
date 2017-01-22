@@ -1,0 +1,83 @@
+{
+    "wx-pages": {
+        "prefix": "wx-pages",
+        "body": [
+            "\"pages\": [",
+            "$page",
+            "]"
+        ],
+        "description": ""
+    },
+    "wx-window": {
+        "prefix": "wx-window",
+        "body": [
+            "\"window\": {",
+            "\"navigationBarBackgroundColor\": \"#000000\",",
+            "\"navigationBarTextStyle\": \"white\",",
+            "\"navigationBarTitleText\": \"\",",
+            "\"backgroundColor\": \"#ffffff\",",
+            "\"backgroundTextStyle\": \"dark\",",
+            "\"enablePullDownRefresh\": false",
+            "}"
+        ],
+        "description": "用于设置小程序的状态栏、导航条、标题、窗口背景色。"
+    },
+    "wx-tabBar": {
+        "prefix": "wx-tabBar",
+        "body": [
+            "\"tabBar\": {",
+            "\"color\": \"\",",
+            "\"selectedColor\": \"\",",
+            "\"backgroundColor\": \"\",",
+            "\"borderStyle\": \"white\",",
+            "\"position\": \"bottom\",",
+            "\"list\": [",
+            "$tab",
+            "]",
+            "}"
+        ],
+        "description": ""
+    },
+    "wx-tab": {
+        "prefix": "wx-tab",
+        "body": [
+            "{",
+            "\"pagePath\": \"\",",
+            "\"iconPath\": \"\",",
+            "\"selectedIconPath\": \"\",",
+            "\"text\": \"\"",
+            "}"
+        ],
+        "description": ""
+    },
+    "wx-networkTimeout": {
+        "prefix": "wx-networkTimeout",
+        "body": [
+            "\"networkTimeout\": {",
+            "\"request\": 60000,",
+            "\"connectSocket\": 60000,",
+            "\"uploadFile\": 60000,",
+            "\"downloadFile\": 60000",
+            "}"
+        ],
+        "description": "可以设置各种网络请求的超时时间。"
+    },
+    "wx-debug": {
+        "prefix": "wx-debug",
+        "body": "\"debug\": true",
+        "description": ""
+    },
+    "wx-page": {
+        "prefix": "wx-page",
+        "body": [
+            "\"navigationBarBackgroundColor\": \"#000000\",",
+            "\"navigationBarTextStyle\": \"white\",",
+            "\"navigationBarTitleText\": \"\",",
+            "\"backgroundColor\": \"#ffffff\",",
+            "\"backgroundTextStyle\": \"dark\",",
+            "\"enablePullDownRefresh\": false,",
+            "\"disableScroll\": false"
+        ],
+        "description": ""
+    }
+}

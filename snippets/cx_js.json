@@ -1,0 +1,1475 @@
+{
+    "wx-app-onLaunch": {
+        "prefix": "wx-app-onLaunch",
+        "body": [
+            "onLaunch: function() {",
+            "",
+            "}"
+        ],
+        "description": "当小程序初始化完成时，会触发 onLaunch（全局只触发一次）"
+    },
+    "wx-app-onShow": {
+        "prefix": "wx-app-onShow",
+        "body": [
+            "onShow: function() {",
+            "",
+            "}"
+        ],
+        "description": "当小程序启动，或从后台进入前台显示，会触发 onShow"
+    },
+    "wx-app-onHide": {
+        "prefix": "wx-app-onHide",
+        "body": [
+            "onHide: function() {",
+            "",
+            "}"
+        ],
+        "description": "当小程序从前台进入后台，会触发 onHide"
+    },
+    "wx-app-onError": {
+        "prefix": "wx-app-onError",
+        "body": [
+            "onError: function(msg) {",
+            "",
+            "}"
+        ],
+        "description": "当小程序发生脚本错误，或者 api 调用失败时，会触发 onError 并带上错误信息"
+    },
+    "wx-app-globalData": {
+        "prefix": "wx-app-globalData",
+        "body": "globalData: {}",
+        "description": ""
+    },
+    "wx-getApp": {
+        "prefix": "wx-getApp",
+        "body": "var app = getApp();",
+        "description": ""
+    },
+    "wx-page-data": {
+        "prefix": "wx-page-data",
+        "body": "data: {}",
+        "description": "页面的初始数据"
+    },
+    "wx-page-onLoad": {
+        "prefix": "wx-page-onLoad",
+        "body": [
+            "onLoad: function(options) {",
+            "",
+            "}"
+        ],
+        "description": "生命周期函数--监听页面加载"
+    },
+    "wx-page-onReady": {
+        "prefix": "wx-page-onReady",
+        "body": [
+            "onReady: function() {",
+            "",
+            "}"
+        ],
+        "description": "生命周期函数--监听页面初次渲染完成"
+    },
+    "wx-page-onShow": {
+        "prefix": "wx-page-onShow",
+        "body": [
+            "onShow: function() {",
+            "",
+            "}"
+        ],
+        "description": "生命周期函数--监听页面显示"
+    },
+    "wx-page-onHide": {
+        "prefix": "wx-page-onHide",
+        "body": [
+            "onHide: function() {",
+            "",
+            "}"
+        ],
+        "description": "生命周期函数--监听页面隐藏"
+    },
+    "wx-page-onUnload": {
+        "prefix": "wx-page-onUnload",
+        "body": [
+            "onUnload: function() {",
+            "",
+            "}"
+        ],
+        "description": "生命周期函数--监听页面卸载"
+    },
+    "wx-page-onPullDownRefresh": {
+        "prefix": "wx-page-onPullDownRefresh",
+        "body": [
+            "onPullDownRefresh: function() {",
+            "",
+            "}"
+        ],
+        "description": "页面相关事件处理函数--监听用户下拉动作"
+    },
+    "wx-page-onReachBottom": {
+        "prefix": "wx-page-onReachBottom",
+        "body": [
+            "onReachBottom: function() {",
+            "",
+            "}"
+        ],
+        "description": "页面上拉触底事件的处理函数"
+    },
+    "wx-page-onShareAppMessage": {
+        "prefix": "wx-page-onShareAppMessage",
+        "body": [
+            "onShareAppMessage: function() {",
+            "return {",
+            "title: '$1',",
+            "desc: '$2',",
+            "path: '$3'",
+            "}",
+            "}"
+        ],
+        "description": "用户点击右上角分享"
+    },
+    "wx-setData": {
+        "prefix": "wx-setData",
+        "body": [
+            "this.setData({",
+            "",
+            "});"
+        ],
+        "description": ""
+    },
+    "wx-getCurrentPages": {
+        "prefix": "wx-getCurrentPages",
+        "body": "var pages = getCurrentPages();",
+        "description": ""
+    },
+    "wx-map-markers": {
+        "prefix": "wx-map-markers",
+        "body": [
+            "markers: [{",
+            "longitude: $2,//经度",
+            "latitude: $1,//纬度",
+            "title: '$3,'//标注点名",
+            "id: $4,//标记点id",
+            "iconPath: '$5',//显示的图标",
+            "rotate: 0,//旋转角度",
+            "alpha: 1,//标注的透明度",
+            "width: $6,//标注图标宽度",
+            "height: $7//标注图标高度",
+            "}]"
+        ],
+        "description": ""
+    },
+    "wx-map-markers-must": {
+        "prefix": "wx-map-markers-must",
+        "body": [
+            "markers: [{",
+            "longitude: $2,//经度",
+            "latitude: $1,//纬度",
+            "title: '$3'//标注点名",
+            "}]"
+        ],
+        "description": ""
+    },
+    "wx-map-polyline-must": {
+        "prefix": "wx-map-polyline-must",
+        "body": [
+            "polyline: [{",
+            "points: [{",
+            "longitude: $1,",
+            "latitude: $2",
+            "}]//经纬度数组",
+            "}]"
+        ],
+        "description": ""
+    },
+    "wx-map-polyline": {
+        "prefix": "wx-map-polyline",
+        "body": [
+            "polyline: [{",
+            "points: [{",
+            "longitude: $1,",
+            "latitude: $2",
+            "}],//经纬度数组",
+            "color: '$3',//线的颜色",
+            "width: $4,//线的宽度",
+            "dottedLine: ${5:false}//是否虚线",
+            "}]"
+        ],
+        "description": ""
+    },
+    "wx-map-circles-must": {
+        "prefix": "wx-map-circles-must",
+        "body": [
+            "circles: [{",
+            "longitude: $2,//经度",
+            "latitude: $1,//纬度",
+            "radius: $3//半径",
+            "}]"
+        ],
+        "description": ""
+    },
+    "wx-map-circles": {
+        "prefix": "wx-map-circles",
+        "body": [
+            "circles: [{",
+            "longitude: $2,//经度",
+            "latitude: $1,//纬度",
+            "radius: $3,//半径",
+            "color: '$4',//描边的颜色",
+            "fillColor: '$5',//填充颜色",
+            "strokeWidth: $6//描边的宽度",
+            "}]"
+        ],
+        "description": ""
+    },
+    "wx-map-controls-must": {
+        "prefix": "wx-map-controls-must",
+        "body": [
+            "controls: [{",
+            "iconPath: '$1',//显示的图标",
+            "position: {",
+            "left: ${2:0},",
+            "top: ${3:0},",
+            "width: $4,",
+            "height: $5",
+            "}//控件在地图的位置",
+            "}]"
+        ],
+        "description": ""
+    },
+    "wx-map-controls": {
+        "prefix": "wx-map-controls",
+        "body": [
+            "controls: [{",
+            "iconPath: '$1',//显示的图标",
+            "position: {",
+            "left: ${2:0},",
+            "top: ${3:0},",
+            "width: $4,",
+            "height: $5",
+            "},//控件在地图的位置",
+            "id: $6,//控件id",
+            "clickable: ${7:false}//是否可点击",
+            "}]"
+        ],
+        "description": ""
+    },
+    "wx-request": {
+        "prefix": "wx-request",
+        "body": [
+            "wx.request({",
+            "url: '$1',",
+            "method: '${2:get}'",
+            "data: {",
+            "$3",
+            "},",
+            "success: function(res) {",
+            "//res.data",
+            "},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "HTTPS 请求。"
+    },
+    "wx-uploadFile": {
+        "prefix": "wx-uploadFile",
+        "body": [
+            "wx.uploadFile({",
+            "url: '$1',",
+            "filePath: '$2',",
+            "name: '${3:file}',",
+            "formData: {},",
+            "success: function(res) {",
+            "//res.data",
+            "},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "将本地资源上传到开发者服务器。"
+    },
+    "wx-downloadFile": {
+        "prefix": "wx-downloadFile",
+        "body": [
+            "wx.downloadFile({",
+            "url: '$1',",
+            "success: function(res) {",
+            "//res.tempFilePath",
+            "},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "下载文件资源到本地"
+    },
+    "wx-connectSocket": {
+        "prefix": "wx-connectSocket",
+        "body": [
+            "wx.connectSocket({",
+            "url: '$1',",
+            "method: '${2:get}'",
+            "data: {",
+            "$3",
+            "},",
+            "success: function(res) {",
+            "//res.data",
+            "},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "创建一个 WebSocket 连接"
+    },
+    "wx-onSocketOpen": {
+        "prefix": "wx-onSocketOpen",
+        "body": [
+            "wx.onSocketOpen(function(res) {",
+            "$1",
+            "});"
+        ],
+        "description": "监听WebSocket连接打开事件。"
+    },
+    "wx-onSocketError": {
+        "prefix": "wx-onSocketError",
+        "body": [
+            "wx.onSocketError(function(res){",
+            "$1",
+            "});"
+        ],
+        "description": "监听WebSocket错误。"
+    },
+    "wx-sendSocketMessage": {
+        "prefix": "wx-sendSocketMessage",
+        "body": [
+            "wx.sendSocketMessage({",
+            "data: {",
+            "$3",
+            "},",
+            "success: function(res) {",
+            "//res.data",
+            "},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "通过 WebSocket 连接发送数据，需要先 wx.connectSocket，并在 wx.onSocketOpen 回调之后才能发送。"
+    },
+    "wx-onSocketMessage": {
+        "prefix": "wx-onSocketMessage",
+        "body": [
+            "wx.onSocketMessage(function(res) {",
+            "$1",
+            "});"
+        ],
+        "description": "监听WebSocket接受到服务器的消息事件。"
+    },
+    "wx-closeSocket": {
+        "prefix": "wx-closeSocket",
+        "body": "wx.closeSocket();",
+        "description": "关闭WebSocket连接。"
+    },
+    "wx-onSocketClose": {
+        "prefix": "wx-onSocketClose",
+        "body": [
+            "wx.onSocketClose(function(res) {",
+            "$1",
+            "});"
+        ],
+        "description": "监听WebSocket关闭。"
+    },
+    "wx-": {
+        "prefix": "wx-",
+        "body": [
+            "wx.chooseImage({",
+            "count: 9,",
+            "sizeType: ['original', 'compressed'],",
+            "sourceType: ['album', 'camera'],",
+            "success: function(res) {",
+            "//res.tempFilePaths",
+            "},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "从本地相册选择图片或使用相机拍照。"
+    },
+    "wx-previewImage": {
+        "prefix": "wx-previewImage",
+        "body": [
+            "wx.previewImage({",
+            "current: '',",
+            "urls: [$1],",
+            "success: function(res) {",
+            "",
+            "},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "预览图片。"
+    },
+    "wx-getImageInfo": {
+        "prefix": "wx-getImageInfo",
+        "body": [
+            "wx.getImageInfo({",
+            " src: '$1',",
+            "success: function(res) {",
+            "//res.width,height,path",
+            "},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "获取图片信息"
+    },
+    "wx-startRecord": {
+        "prefix": "wx-startRecord",
+        "body": [
+            "wx.startRecord({",
+            "success: function(res) {",
+            "//res.tempFilePath",
+            "},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "开始录音。当主动调用wx.stopRecord，或者录音超过1分钟时自动结束录音，返回录音文件的临时文件路径。当用户离开小程序时，此接口无法调用。"
+    },
+    "wx-stopRecord": {
+        "prefix": "wx-stopRecord",
+        "body": "wx.stopRecord();",
+        "description": "​ 主动调用停止录音。"
+    },
+    "wx-playVoice": {
+        "prefix": "wx-playVoice",
+        "body": [
+            "wx.playVoice({",
+            "filePath: '$1',",
+            "success: function(res) {",
+            "",
+            "},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "开始播放语音，同时只允许一个语音文件正在播放，如果前一个语音文件还没播放完，将中断前一个语音播放。"
+    },
+    "wx-pauseVoice": {
+        "prefix": "wx-pauseVoice",
+        "body": "wx.pauseVoice();",
+        "description": "暂停正在播放的语音。再次调用wx.playVoice播放同一个文件时，会从暂停处开始播放。如果想从头开始播放，需要先调用 wx.stopVoice。"
+    },
+    "wx-stopVoice": {
+        "prefix": "wx-stopVoice",
+        "body": "wx.stopVoice();",
+        "description": "结束播放语音。"
+    },
+    "wx-getBackgroundAudioPlayerState": {
+        "prefix": "wx-getBackgroundAudioPlayerState",
+        "body": [
+            "wx.getBackgroundAudioPlayerState({",
+            "success: function(res) {",
+            "//res.duration 选定音频的长度（单位：s），只有在当前有音乐播放时返回",
+            "//res.currentPosition 选定音频的播放位置（单位：s），只有在当前有音乐播放时返回",
+            "//res.status 播放状态（2：没有音乐在播放，1：播放中，0：暂停中）",
+            "//res.downloadPercent 音频的下载进度（整数，80 代表 80%），只有在当前有音乐播放时返回",
+            "//res.dataUrl 歌曲数据链接，只有在当前有音乐播放时返回",
+            "},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "获取后台音乐播放状态。"
+    },
+    "wx-playBackgroundAudio": {
+        "prefix": "wx-playBackgroundAudio",
+        "body": [
+            "wx.playBackgroundAudio({",
+            "dataUrl: '$1',",
+            "title: '$2',",
+            "coverImgUrl: '$3'",
+            "success: function(res) {",
+            "",
+            "},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "使用后台播放器播放音乐，对于微信客户端来说，只能同时有一个后台音乐在播放。当用户离开小程序后，音乐将暂停播放；当用户点击“显示在聊天顶部”时，音乐不会暂停播放；当用户在其他小程序占用了音乐播放器，原有小程序内的音乐将停止播放。"
+    },
+    "wx-pauseBackgroundAudio": {
+        "prefix": "wx-pauseBackgroundAudio",
+        "body": "wx.pauseBackgroundAudio();",
+        "description": "暂停播放音乐。"
+    },
+    "wx-seekBackgroundAudio": {
+        "prefix": "wx-seekBackgroundAudio",
+        "body": [
+            "wx.seekBackgroundAudio({",
+            "position: $1,",
+            "success: function(res) {",
+            "",
+            "},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "控制音乐播放进度。"
+    },
+    "wx-stopBackgroundAudio": {
+        "prefix": "wx-stopBackgroundAudio",
+        "body": "wx.stopBackgroundAudio();",
+        "description": "停止播放音乐。"
+    },
+    "wx-onBackgroundAudioPlay": {
+        "prefix": "wx-onBackgroundAudioPlay",
+        "body": [
+            "wx.onBackgroundAudioPlay(function(res) {",
+            "$1",
+            "});"
+        ],
+        "description": "监听音乐播放。"
+    },
+    "wx-onBackgroundAudioPause": {
+        "prefix": "wx-onBackgroundAudioPause",
+        "body": [
+            "wx.onBackgroundAudioPause(function(res) {",
+            "$1",
+            "});"
+        ],
+        "description": "监听音乐暂停。"
+    },
+    "wx-onBackgroundAudioStop": {
+        "prefix": "wx-onBackgroundAudioStop",
+        "body": [
+            "wx.onBackgroundAudioStop(function(res) {",
+            "$1",
+            "});"
+        ],
+        "description": "监听音乐停止。"
+    },
+    "wx-createAudioContext": {
+        "prefix": "wx-createAudioContext",
+        "body": "this.audioCtx = wx.createAudioContext('$1');",
+        "description": "audioContext 通过 audioId 跟一个 <audio/> 组件绑定，通过它可以操作对应的 <audio/> 组件。"
+    },
+    "wx-audioCtx-setSrc": {
+        "prefix": "wx-audioCtx-setSrc",
+        "body": "this.audioCtx.setSrc('$1');",
+        "description": "音频的地址"
+    },
+    "wx-audioCtx-play": {
+        "prefix": "wx-audioCtx-play",
+        "body": "this.audioCtx.play();",
+        "description": "播放"
+    },
+    "wx-audioCtx-pause": {
+        "prefix": "wx-audioCtx-pause",
+        "body": "this.audioCtx.pause();",
+        "description": "暂停"
+    },
+    "wx-audioCtx-seek": {
+        "prefix": "wx-audioCtx-seek",
+        "body": "this.audioCtx.seek($1);",
+        "description": "跳转到指定位置，单位 s"
+    },
+    "wx-chooseVideo": {
+        "prefix": "wx-chooseVideo",
+        "body": [
+            "wx.chooseVideo({",
+            "sourceType: ['album','camera'],",
+            "maxDuration: 60,",
+            "camera: 'back',//front: 前置，back: 后置",
+            "success: function(res) {",
+            "//res.tempFilePath 选定视频的临时文件路径",
+            "//res.duration 选定视频的时间长度",
+            "//res.size 选定视频的数据量大小",
+            "//res.height 返回选定视频的长",
+            "//res.width 返回选定视频的宽",
+            "},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "拍摄视频或从手机相册中选视频，返回视频的临时文件路径。"
+    },
+    "wx-createVideoContext": {
+        "prefix": "wx-createVideoContext",
+        "body": "this.videoCtx = wx.createVideoContext('$1');",
+        "description": "创建并返回 video 上下文 videoContext 对象"
+    },
+    "wx-videoCtx-play": {
+        "prefix": "wx-videoCtx-play",
+        "body": "this.videoCtx.play();",
+        "description": "播放"
+    },
+    "wx-videoCtx-pause": {
+        "prefix": "wx-videoCtx-pause",
+        "body": "this.videoCtx.pause();",
+        "description": "暂停"
+    },
+    "wx-videoCtx-seek": {
+        "prefix": "wx-videoCtx-seek",
+        "body": "this.videoCtx.seek($1);",
+        "description": "跳转到指定位置，单位 s"
+    },
+    "wx-videoCtx-sendDanmu": {
+        "prefix": "wx-videoCtx-sendDanmu",
+        "body": [
+            "this.videoCtx.sendDanmu({",
+            "text: '$1'",
+            "color: '$2'",
+            "});"
+        ],
+        "description": "发送弹幕，danmu 包含两个属性 text, color。"
+    },
+    "wx-saveFile": {
+        "prefix": "wx-saveFile",
+        "body": [
+            "wx.saveFile({",
+            "tempFilePath: '$1',",
+            "success: function(res) {",
+            "//res.savedFilePath",
+            "},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "保存文件到本地。"
+    },
+    "wx-getSavedFileList": {
+        "prefix": "wx-getSavedFileList",
+        "body": [
+            "wx.getSavedFileList({",
+            "success: function(res) {",
+            "//res.errMsg 接口调用结果",
+            "//res.fileList 文件列表",
+            "//res.fileList[0].filePath 文件的本地路径",
+            "//res.fileList[0].createTime 文件的保存时的时间戳，从1970/01/01 08:00:00 到当前时间的秒数",
+            "//res.fileList[0].size 文件大小，单位B",
+            "},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "获取本地已保存的文件列表"
+    },
+    "wx-getSavedFileInfo": {
+        "prefix": "wx-getSavedFileInfo",
+        "body": [
+            "wx.getSavedFileInfo({",
+            "filePath: '$1',",
+            "success: function(res) {",
+            "//res.errMsg 接口调用结果",
+            "//res.size 文件大小，单位B",
+            "//res.createTime 文件的保存是的时间戳，从1970/01/01 08:00:00 到当前时间的秒数",
+            "},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "获取本地文件的文件信息"
+    },
+    "wx-removeSavedFile": {
+        "prefix": "wx-removeSavedFile",
+        "body": [
+            "wx.removeSavedFile({",
+            "filePath: '$1',",
+            "success: function(res) {",
+            "$2",
+            "},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "删除本地存储的文件"
+    },
+    "wx-openDocument": {
+        "prefix": "wx-openDocument",
+        "body": [
+            "wx.openDocument({",
+            "filePath: '$1',",
+            "success: function(res) {",
+            "$2",
+            "},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "新开页面打开文档，支持格式：doc, xls, ppt, pdf, docx, xlsx, pptx"
+    },
+    "wx-setStorage": {
+        "prefix": "wx-setStorage",
+        "body": [
+            "wx.setStorage({",
+            "key: '$1',",
+            "data: $2,",
+            "success: function(res) {},",
+            "fail: function(err) {},",
+            "complete: function() {}",
+            "});"
+        ],
+        "description": "将数据存储在本地缓存中指定的 key 中，会覆盖掉原来该 key 对应的内容，这是一个异步接口。"
+    },
+    "wx-setStorageSync": {
+        "prefix": "wx-setStorageSync",
+        "body": [
+            "try {",
+            "wx.setStorageSync('$1', $2);",
+            "} catch (e) {",
+            "}"
+        ],
+        "description": "将 data 存储在本地缓存中指定的 key 中，会覆盖掉原来该 key 对应的内容，这是一个同步接口。"
+    },
+    "wx-getStorage": {
+        "prefix": "wx-getStorage",
+        "body": [
+            "wx.getStorage({",
+            "key: '$1',",
+            "success: function(res) {",
+            "//res.data",
+            "},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "从本地缓存中异步获取指定 key 对应的内容。"
+    },
+    "wx-getStorageSync": {
+        "prefix": "wx-getStorageSync",
+        "body": [
+            "try {",
+            "var value = wx.getStorageSync('$1');",
+            "if (value) {",
+            "",
+            "}",
+            "} catch (e) {",
+            "}"
+        ],
+        "description": "从本地缓存中同步获取指定 key 对应的内容。"
+    },
+    "wx-getStorageInfo": {
+        "prefix": "wx-getStorageInfo",
+        "body": [
+            "wx.getStorageInfo({",
+            "success: function(res) {",
+            "//res.keys 当前storage中所有的key",
+            "//res.currentSize 当前占用的空间大小, 单位kb",
+            "//res.limitSize 限制的空间大小，单位kb",
+            "},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "异步获取当前storage的相关信息"
+    },
+    "wx-getStorageInfoSync": {
+        "prefix": "wx-getStorageInfoSync",
+        "body": [
+            "try {",
+            "var res = wx.getStorageInfoSync();",
+            "//res.keys 当前storage中所有的key",
+            "//res.currentSize 当前占用的空间大小, 单位kb",
+            "//res.limitSize 限制的空间大小，单位kb",
+            "} catch (e) {",
+            "}"
+        ],
+        "description": "同步获取当前storage的相关信息"
+    },
+    "wx-removeStorage": {
+        "prefix": "wx-removeStorage",
+        "body": [
+            "wx.removeStorage({",
+            "key: '$1',",
+            "success: function(res) {",
+            "//res.data",
+            "},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "从本地缓存中异步移除指定 key 。"
+    },
+    "wx-removeStorageSync": {
+        "prefix": "wx-removeStorageSync",
+        "body": [
+            "try {",
+            "wx.removeStorageSync('$1');",
+            "} catch (e) {",
+            "}"
+        ],
+        "description": "从本地缓存中同步移除指定 key 。"
+    },
+    "wx-clearStorage": {
+        "prefix": "wx-clearStorage",
+        "body": "wx.clearStorage();",
+        "description": "清理本地数据缓存。"
+    },
+    "wx-clearStorageSync": {
+        "prefix": "wx-clearStorageSync",
+        "body": [
+            "try {",
+            "wx.clearStorageSync();",
+            "} catch (e) {",
+            "}"
+        ],
+        "description": "同步清理本地数据缓存"
+    },
+    "wx-getLocation": {
+        "prefix": "wx-getLocation",
+        "body": [
+            "wx.getLocation({",
+            "type: 'gcj02',//默认为 wgs84 返回 gps 坐标，gcj02 返回可用于wx.openLocation的坐标",
+            "success: function(res) {",
+            "//res.longitude 经度",
+            "//res.latitude 纬度",
+            "//res.speed 速度，浮点数，单位m/s",
+            "//res.accuracy 位置的精确度",
+            "},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "获取当前的地理位置、速度。当用户离开小程序后，此接口无法调用；当用户点击“显示在聊天顶部”时，此接口可继续调用。"
+    },
+    "wx-chooseLocation": {
+        "prefix": "wx-chooseLocation",
+        "body": [
+            "wx.chooseLocation({",
+            "success: function(res) {",
+            "//res.name 位置名称",
+            "//res.address 详细地址",
+            "//res.longitude 经度",
+            "//res.latitude 纬度",
+            "},",
+            "cancel: function(err){},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "打开地图选择位置"
+    },
+    "wx-openLocation": {
+        "prefix": "wx-openLocation",
+        "body": [
+            "wx.openLocation({",
+            "longitude: $1,",
+            "latitude: $2,",
+            "scale: 18,//缩放比例",
+            "name: '$3',//位置名",
+            "address: '$4',//地址的详细说明",
+            "success: function(res) {},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "使用微信内置地图查看位置"
+    },
+    "wx-createMapContext": {
+        "prefix": "wx-createMapContext",
+        "body": "this.mapCtx = wx.createMapContext('$1');",
+        "description": "创建并返回 map 上下文 mapContext 对象"
+    },
+    "wx-map-getCenterLocation": {
+        "prefix": "wx-map-getCenterLocation",
+        "body": [
+            "this.mapCtx.getCenterLocation({",
+            "success: function(res) {",
+            "//res.longitude 经度",
+            "//res.latitude 纬度",
+            "},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "获取当前地图中心的经纬度，返回的是 gcj02 坐标系，可以用于 wx.openLocation"
+    },
+    "wx-map-moveToLocation": {
+        "prefix": "wx-map-moveToLocation",
+        "body": "this.mapCtx.moveToLocation();",
+        "description": "将地图中心移动到当前定位点，需要配合map组件的show-location使用"
+    },
+    "wx-getSystemInfo": {
+        "prefix": "wx-getSystemInfo",
+        "body": [
+            "wx.getSystemInfo({",
+            "success: function(res) {",
+            "//res.model 手机型号",
+            "//res.pixelRatio 设备像素比",
+            "//res.windowWidth 窗口宽度",
+            "//res.windowHeight 窗口高度",
+            "//res.language 微信设置的语言",
+            "//res.version 微信版本号",
+            "//res.system 操作系统版本",
+            "//res.platform 客户端平台",
+            "},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "获取系统信息。"
+    },
+    "wx-getSystemInfoSync": {
+        "prefix": "wx-getSystemInfoSync",
+        "body": [
+            "try {",
+            " var res = wx.getSystemInfoSync();",
+            "//res.model 手机型号",
+            "//res.pixelRatio 设备像素比",
+            "//res.windowWidth 窗口宽度",
+            "//res.windowHeight 窗口高度",
+            "//res.language 微信设置的语言",
+            "//res.version 微信版本号",
+            "//res.system 操作系统版本",
+            "//res.platform 客户端平台",
+            "} catch (e) {",
+            "}"
+        ],
+        "description": "获取系统信息同步接口"
+    },
+    "wx-getNetworkType": {
+        "prefix": "wx-getNetworkType",
+        "body": [
+            "wx.getNetworkType({",
+            "success: function(res) {",
+            "//res.networkType 网络类型2g，3g，4g，wifi",
+            "},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "获取网络类型。"
+    },
+    "wx-onAccelerometerChange": {
+        "prefix": "wx-onAccelerometerChange",
+        "body": [
+            "wx.onAccelerometerChange(function(res) {",
+            "//res.x X 轴",
+            "//res.y Y 轴",
+            "//res.z Z 轴",
+            "});"
+        ],
+        "description": "监听重力感应数据，频率：5次/秒"
+    },
+    "wx-onCompassChange": {
+        "prefix": "wx-onCompassChange",
+        "body": [
+            "wx.onCompassChange(function (res) {",
+            "//res.direction 面对的方向度数",
+            "});"
+        ],
+        "description": "监听罗盘数据，频率：5次/秒"
+    },
+    "wx-makePhoneCall": {
+        "prefix": "wx-makePhoneCall",
+        "body": [
+            "wx.makePhoneCall({",
+            "phoneNumber: '$1',",
+            "success: function(res) {},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "拨打电话"
+    },
+    "wx-scanCode": {
+        "prefix": "wx-scanCode",
+        "body": [
+            "wx.scanCode({",
+            "success: function(res) {",
+            "//res.result 所扫码的内容",
+            "//res.scanType 所扫码的类型",
+            "//res.charSet 所扫码的字符集",
+            "//res.path 当所扫的码为当前小程序的合法二维码时，会返回此字段，内容为二维码携带的 path",
+            "},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "调起客户端扫码界面，扫码成功后返回对应的结果"
+    },
+    "wx-showToast": {
+        "prefix": "wx-showToast",
+        "body": [
+            "wx.showToast({",
+            "title: '$1',",
+            "icon: 'success',//success or loading",
+            "duration: 1500",
+            "mask: 'false'",
+            "});"
+        ],
+        "description": "显示消息提示框"
+    },
+    "wx-hideToast": {
+        "prefix": "wx-hideToast",
+        "body": "wx.hideToast();",
+        "description": "隐藏消息提示框"
+    },
+    "wx-showModal-must": {
+        "prefix": "wx-showModal-must",
+        "body": [
+            "wx.showModal({",
+            "title: '$1',",
+            "content: '$2',",
+            "success: function(res) {",
+            "if (res.confirm) {",
+            "$3",
+            "} else {",
+            "$4",
+            "}",
+            "},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "​显示模态弹窗"
+    },
+    "wx-showModal": {
+        "prefix": "wx-showModal",
+        "body": [
+            "wx.showModal({",
+            "title: '$1',",
+            "content: '$2',",
+            "showCancel: true,",
+            "cancelText: '取消',",
+            "cancelColor: '#000000',",
+            "confirmText: '确定',",
+            "confirmColor: '#3CC51F',",
+            "success: function(res) {",
+            "if (res.confirm) {",
+            "$3",
+            "} else {",
+            "$4",
+            "}",
+            "},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": ""
+    },
+    "wx-showActionSheet": {
+        "prefix": "wx-showActionSheet",
+        "body": [
+            "wx.showActionSheet({",
+            "itemList: [$1],",
+            "itemColor: '#000000',",
+            "success: function(res) {",
+            "//res.tapIndex 用户点击的按钮，从上到下的顺序，从0开始",
+            "},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "显示操作菜单"
+    },
+    "wx-setNavigationBarTitle": {
+        "prefix": "wx-setNavigationBarTitle",
+        "body": [
+            "wx.setNavigationBarTitle({",
+            "title: '$1'",
+            "});"
+        ],
+        "description": "动态设置当前页面的标题。"
+    },
+    "wx-showNavigationBarLoading": {
+        "prefix": "wx-showNavigationBarLoading",
+        "body": "wx.showNavigationBarLoading();",
+        "description": "在当前页面显示导航条加载动画。"
+    },
+    "wx-hideNavigationBarLoading": {
+        "prefix": "wx-hideNavigationBarLoading",
+        "body": "wx.hideNavigationBarLoading();",
+        "description": "隐藏导航条加载动画。"
+    },
+    "wx-navigateTo": {
+        "prefix": "wx-navigateTo",
+        "body": [
+            "wx.navigateTo({",
+            "url: '$1'",
+            "});"
+        ],
+        "description": "保留当前页面，跳转到应用内的某个页面，使用wx.navigateBack可以返回到原页面。"
+    },
+    "wx-redirectTo": {
+        "prefix": "wx-redirectTo",
+        "body": [
+            "wx.redirectTo({",
+            "url: '$1'",
+            "});"
+        ],
+        "description": "关闭当前页面，跳转到应用内的某个页面。"
+    },
+    "wx-switchTab": {
+        "prefix": "wx-switchTab",
+        "body": [
+            "wx.switchTab({",
+            "url: '$1'",
+            "});"
+        ],
+        "description": "跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面"
+    },
+    "wx-navigateBack": {
+        "prefix": "wx-navigateBack",
+        "body": [
+            "wx.navigateBack({",
+            "delta: $1//返回的页面数，如果 delta 大于现有页面数，则返回到首页。",
+            "});"
+        ],
+        "description": "关闭当前页面，返回上一页面或多级页面。可通过 getCurrentPages()) 获取当前的页面栈，决定需要返回几层。"
+    },
+    "wx-animation": {
+        "prefix": "wx-animation",
+        "body": "this.animation = wx.createAnimation();",
+        "description": ""
+    },
+    "wx-animation-options": {
+        "prefix": "wx-animation-options",
+        "body": [
+            "this.animation = wx.createAnimation({",
+            "duration: 400,//动画持续时间，单位ms",
+            "timingFunction: 'linear',//定义动画的效果，有效值：'linear','ease','ease-in','ease-in-out','ease-out','step-start','step-end'",
+            "transformOrigin: '50% 50% 0',",
+            "delay: 0//动画延迟时间",
+            "});"
+        ],
+        "description": "创建一个动画实例animation。调用实例的方法来描述动画。最后通过动画实例的export方法导出动画数据传递给组件的animation属性。"
+    },
+    "wx-animation-step": {
+        "prefix": "wx-animation-step",
+        "body": "animation.step();",
+        "description": ""
+    },
+    "wx-animation-step-options": {
+        "prefix": "wx-animation-step-options",
+        "body": [
+            "animation.step({",
+            "duration: 400,//动画持续时间，单位ms",
+            "timingFunction: 'linear',//定义动画的效果，有效值：'linear','ease','ease-in','ease-in-out','ease-out','step-start','step-end'",
+            "transformOrigin: '50% 50% 0',",
+            "delay: 0//动画延迟时间",
+            "});"
+        ],
+        "description": ""
+    },
+    "wx-animation-export": {
+        "prefix": "wx-animation-export",
+        "body": "animation.export()",
+        "description": ""
+    },
+    "wx-animation-opacity": {
+        "prefix": "wx-animation-opacity",
+        "body": "animation.opacity($1);",
+        "description": "透明度，参数范围 0~1"
+    },
+    "wx-animation-backgroundColor": {
+        "prefix": "wx-animation-backgroundColor",
+        "body": "animation.backgroundColor($1);",
+        "description": "颜色值"
+    },
+    "wx-animation-width": {
+        "prefix": "wx-animation-width",
+        "body": "animation.width($1);",
+        "description": "如果传入 Number 则默认使用 px，可传入其他自定义单位的长度值"
+    },
+    "wx-animation-height": {
+        "prefix": "wx-animation-height",
+        "body": "animation.height($1);",
+        "description": "如果传入 Number 则默认使用 px，可传入其他自定义单位的长度值"
+    },
+    "wx-animation-top": {
+        "prefix": "wx-animation-top",
+        "body": "animation.top($1);",
+        "description": "如果传入 Number 则默认使用 px，可传入其他自定义单位的长度值"
+    },
+    "wx-animation-left": {
+        "prefix": "wx-animation-left",
+        "body": "animation.left($1);",
+        "description": "如果传入 Number 则默认使用 px，可传入其他自定义单位的长度值"
+    },
+    "wx-animation-bottom": {
+        "prefix": "wx-animation-bottom",
+        "body": "animation.bottom($1);",
+        "description": "如果传入 Number 则默认使用 px，可传入其他自定义单位的长度值"
+    },
+    "wx-animation-right": {
+        "prefix": "wx-animation-right",
+        "body": "animation.right($1);",
+        "description": "如果传入 Number 则默认使用 px，可传入其他自定义单位的长度值"
+    },
+    "wx-animation-rotate": {
+        "prefix": "wx-animation-rotate",
+        "body": "animation.rotate($1);",
+        "description": "deg的范围-180~180，从原点顺时针旋转一个deg角度"
+    },
+    "wx-animation-rotateX": {
+        "prefix": "wx-animation-rotateX",
+        "body": "animation.rotateX($1);",
+        "description": "deg的范围-180~180，在X轴旋转一个deg角度"
+    },
+    "wx-animation-rotateY": {
+        "prefix": "wx-animation-rotateY",
+        "body": "animation.rotateY($1);",
+        "description": "deg的范围-180~180，在Y轴旋转一个deg角度"
+    },
+    "wx-animation-rotateZ": {
+        "prefix": "wx-animation-rotateZ",
+        "body": "animation.rotateZ($1);",
+        "description": "deg的范围-180~180，在Z轴旋转一个deg角度"
+    },
+    "wx-animation-rotate3d": {
+        "prefix": "wx-animation-rotate3d",
+        "body": "animation.rotate3d(x,y,z,deg);",
+        "description": "同transform-function rotate3d"
+    },
+    "wx-animation-scale": {
+        "prefix": "wx-animation-scale",
+        "body": "animation.scale(sx,sy);",
+        "description": "一个参数时，表示在X轴、Y轴同时缩放sx倍数；两个参数时表示在X轴缩放sx倍数，在Y轴缩放sy倍数"
+    },
+    "wx-animation-opacity": {
+        "prefix": "wx-animation-opacity",
+        "body": "animation.opacity($1);",
+        "description": ""
+    },
+    "wx-animation-scaleX": {
+        "prefix": "wx-animation-scaleX",
+        "body": "animation.scaleX($1);",
+        "description": "在X轴缩放sx倍数"
+    },
+    "wx-animation-scaleY": {
+        "prefix": "wx-animation-scaleY",
+        "body": "animation.scaleY($1);",
+        "description": "在Y轴缩放sy倍数"
+    },
+    "wx-animation-scaleZ": {
+        "prefix": "wx-animation-scaleZ",
+        "body": "animation.scaleZ($1);",
+        "description": "在Z轴缩放sy倍数"
+    },
+    "wx-animation-scale3d": {
+        "prefix": "wx-animation-scale3d",
+        "body": "animation.scale3d(sx,sy,sz);",
+        "description": "在X轴缩放sx倍数，在Y轴缩放sy倍数，在Z轴缩放sz倍数"
+    },
+    "wx-animation-translate": {
+        "prefix": "wx-animation-translate",
+        "body": "animation.translate(tx,ty);",
+        "description": "一个参数时，表示在X轴偏移tx，单位px；两个参数时，表示在X轴偏移tx，在Y轴偏移ty，单位px。"
+    },
+    "wx-animation-translateX": {
+        "prefix": "wx-animation-translateX",
+        "body": "animation.translateX($1);",
+        "description": "在X轴偏移tx，单位px"
+    },
+    "wx-animation-translateY": {
+        "prefix": "wx-animation-translateY",
+        "body": "animation.translateY($1);",
+        "description": "在Y轴偏移tx，单位px"
+    },
+    "wx-animation-translateZ": {
+        "prefix": "wx-animation-translateZ",
+        "body": "animation.translateZ($1);",
+        "description": "在Z轴偏移tx，单位px"
+    },
+    "wx-animation-translate3d": {
+        "prefix": "wx-animation-translate3d",
+        "body": "animation.translate3d(tx,ty,tz);",
+        "description": "在X轴偏移tx，在Y轴偏移ty，在Z轴偏移tz，单位px"
+    },
+    "wx-animation-skew": {
+        "prefix": "wx-animation-skew",
+        "body": "animation.skew(ax,ay);",
+        "description": "参数范围-180~180；一个参数时，Y轴坐标不变，X轴坐标延顺时针倾斜ax度；两个参数时，分别在X轴倾斜ax度，在Y轴倾斜ay度"
+    },
+    "wx-animation-skewX": {
+        "prefix": "wx-animation-skewX",
+        "body": "animation.skewX($1);",
+        "description": "参数范围-180~180；Y轴坐标不变，X轴坐标延顺时针倾斜ax度"
+    },
+    "wx-animation-skewY": {
+        "prefix": "wx-animation-skewY",
+        "body": "animation.skewY($1);",
+        "description": "参数范围-180~180；X轴坐标不变，Y轴坐标延顺时针倾斜ay度"
+    },
+    "wx-animation-matrix": {
+        "prefix": "wx-animation-matrix",
+        "body": "animation.matrix(a,b,c,d,tx,ty);",
+        "description": "同transform-function matrix"
+    },
+    "wx-animation-matrix3d": {
+        "prefix": "wx-animation-matrix3d",
+        "body": "animation.matrix3d($1);",
+        "description": "同transform-function matrix3d"
+    },
+    "wx-createCanvasContext": {
+        "prefix": "wx-createCanvasContext",
+        "body": "this.ctx = wx.createCanvasContext('$1');",
+        "description": "创建 canvas 绘图上下文（指定 canvasId）"
+    },
+    "wx-canvasToTempFilePath": {
+        "prefix": "wx-canvasToTempFilePath",
+        "body": [
+            "wx.canvasToTempFilePath({",
+            "canvasId: '$1',",
+            "success: function(res) {",
+            "//res.tempFilePath",
+            "},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "把当前画布的内容导出生成图片，并返回文件路径"
+    },
+    "wx-createCircularGradient": {
+        "prefix": "wx-createCircularGradient",
+        "body": "const grd = ctx.createCircularGradient($x, $y, $r);",
+        "description": "创建一个从圆心开始的渐变"
+    },
+    "wx-setFillStyle": {
+        "prefix": "wx-setFillStyle",
+        "body": "ctx.setFillStyle('$color');",
+        "description": "设置填充色，默认颜色为 black。"
+    },
+    "wx-setStrokeStyle": {
+        "prefix": "wx-setStrokeStyle",
+        "body": "ctx.setStrokeStyle('$color');",
+        "description": "设置边框颜色，默认颜色为 black。"
+    },
+    "wx-setShadow": {
+        "prefix": "wx-setShadow",
+        "body": "ctx.setShadow($offsetX, $offsetY, $blur, '$color');",
+        "description": "设置阴影样式，offsetX 默认值为0， offsetY 默认值为0， blur 默认值为0，color 默认值为 black。"
+    },
+    "wx-setLineWidth": {
+        "prefix": "wx-setLineWidth",
+        "body": "ctx.setLineWidth($1);",
+        "description": "设置线条的宽度。"
+    },
+    "wx-setLineCap": {
+        "prefix": "wx-setLineCap",
+        "body": "ctx.setLineCap('$1');",
+        "description": "设置线条的端点样式('butt'、'round'、'square')。"
+    },
+    "wx-setLineJoin": {
+        "prefix": "wx-setLineJoin",
+        "body": "ctx.setLineJoin('$1');",
+        "description": "设置线条的交点样式('bevel'、'round'、'miter')。"
+    },
+    "wx-setMiterLimit": {
+        "prefix": "wx-setMiterLimit",
+        "body": "ctx.setMiterLimit($1);",
+        "description": "设置最大斜接长度，斜接长度指的是在两条线交汇处内角和外角之间的距离。 当 setLineJoin() 为 miter 时才有效。超过最大倾斜长度的，连接处将以 lineJoin 为 bevel 来显示"
+    },
+    "wx-setFontSize": {
+        "prefix": "wx-setFontSize",
+        "body": "ctx.setFontSize($1);",
+        "description": "设置字体的字号。"
+    },
+    "wx-setGlobalAlpha": {
+        "prefix": "wx-setGlobalAlpha",
+        "body": "ctx.setGlobalAlpha($1);",
+        "description": "设置全局画笔透明度，0 表示完全透明，1 表示完全不透明。"
+    },
+    "wx-draw": {
+        "prefix": "wx-draw",
+        "body": "ctx.draw($reserve);",
+        "description": "将之前在绘图上下文中的描述（路径、变形、样式）画到 canvas 中。\n本次绘制是否接着上一次绘制，即reserve参数为false，则在本次调用drawCanvas绘制之前native层应先清空画布再继续绘制；若reserver参数为true，则保留当前画布上的内容，本次调用drawCanvas绘制的内容覆盖在上面，默认 false"
+    },
+    "wx-onPullDownRefresh": {
+        "prefix": "wx-onPullDownRefresh",
+        "body": [
+            "onPullDownRefresh: function(){",
+            "$1",
+            "}"
+        ],
+        "description": "在 Page 中定义 onPullDownRefresh 处理函数，监听该页面用户下拉刷新事件。"
+    },
+    "wx-stopPullDownRefresh": {
+        "prefix": "wx-stopPullDownRefresh",
+        "body": "wx.stopPullDownRefresh();",
+        "description": "停止当前页面下拉刷新。"
+    },
+    "wx-": {
+        "prefix": "wx-",
+        "body": [
+            "wx.login({",
+            "success: function(res) {",
+            "//res.errMsg 调用结果",
+            "//res.code 用户允许登录后，回调内容会带上 code（有效期五分钟），开发者需要将 code 发送到开发者服务器后台，使用code 换取 session_key api，将 code 换成 openid 和 session_key",
+            "},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "调用接口获取登录凭证（code）进而换取用户登录态信息，包括用户的唯一标识（openid） 及本次登录的 会话密钥（session_key）。用户数据的加解密通讯需要依赖会话密钥完成。"
+    },
+    "wx-checkSession": {
+        "prefix": "wx-checkSession",
+        "body": [
+            "wx.checkSession({",
+            "success: function(res) {},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "检查登录态是否过期"
+    },
+    "wx-getUserInfo": {
+        "prefix": "wx-getUserInfo",
+        "body": [
+            "wx.getUserInfo({",
+            "success: function(res) {",
+            "//res.userInfo 用户信息对象(nickName、avatarUrl、gender、province、city、country)，不包含 openid 等敏感信息",
+            "//res.rawData 不包括敏感信息的原始数据字符串，用于计算签名。",
+            "//res.signature 使用 sha1( rawData + sessionkey ) 得到字符串，用于校验用户信息。",
+            "//res.encryptedData 包括敏感数据在内的完整用户信息的加密数据，详细见加密数据解密算法",
+            "//res.iv 加密算法的初始向量，详细见加密数据解密算法",
+            "},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "获取用户信息，需要先调用 wx.login 接口。"
+    },
+    "wx-requestPayment": {
+        "prefix": "wx-requestPayment",
+        "body": [
+            "wx.requestPayment({",
+            "timeStamp : '$1',//时间戳从1970年1月1日00:00:00至今的秒数,即当前的时间",
+            "nonceStr : '$2',//随机字符串，长度为32个字符以下。",
+            "package : '$3',//统一下单接口返回的 prepay_id 参数值，提交格式如：prepay_id=*",
+            "signType : '$4',//签名算法，暂支持 MD5",
+            "paySign : '$5',//签名,具体签名方案参见微信公众号支付帮助文档;",
+            "success: function(res) {",
+            "$6",
+            "},",
+            "fail: function(err){},",
+            "complete: function(){}",
+            "});"
+        ],
+        "description": "发起微信支付。"
+    },
+    "wx-": {
+        "prefix": "wx-",
+        "body": [
+            "",
+            "",
+            ""
+        ],
+        "description": ""
+    },
+    "wx-": {
+        "prefix": "wx-",
+        "body": "",
+        "description": ""
+    },
+    "wx-": {
+        "prefix": "wx-",
+        "body": [
+            "",
+            "",
+            ""
+        ],
+        "description": ""
+    }
+}

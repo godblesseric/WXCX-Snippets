@@ -1,0 +1,1080 @@
+{
+    "wx-if": {
+        "prefix": "wx-if",
+        "body": "wx:if=\"{{$1}}\"",
+        "description": ""
+    },
+    "wx-elif": {
+        "prefix": "wx-elif",
+        "body": "wx:elif=\"{{$1}}\"",
+        "description": ""
+    },
+    "wx-else": {
+        "prefix": "wx-else",
+        "body": "wx:else",
+        "description": ""
+    },
+    "wx-if-block": {
+        "prefix": "wx-if-block",
+        "body": [
+            "<block wx:if=\"{{$1}}\">",
+            "",
+            "</block>"
+        ],
+        "description": ""
+    },
+    "wx-elif-block": {
+        "prefix": "wx-elif-block",
+        "body": [
+            "<block wx:elif=\"{{$1}}\">",
+            "",
+            "</block>"
+        ],
+        "description": ""
+    },
+    "wx-else-block": {
+        "prefix": "wx-else-block",
+        "body": [
+            "<block wx:else>",
+            "",
+            "</block>"
+        ],
+        "description": ""
+    },
+    "wx-for": {
+        "prefix": "wx-for",
+        "body": "wx:for=\"{{$1}}\"",
+        "description": ""
+    },
+    "wx-for-index": {
+        "prefix": "wx-for-index",
+        "body": "wx:for-index=\"$1\"",
+        "description": ""
+    },
+    "wx-for-item": {
+        "prefix": "wx-for-item",
+        "body": "wx:for-item=\"$1\"",
+        "description": ""
+    },
+    "wx-for-block": {
+        "prefix": "wx-for-block",
+        "body": [
+            "<block wx:for=\"{{$1}}\">",
+            "",
+            "</block>"
+        ],
+        "description": ""
+    },
+    "wx-key": {
+        "prefix": "wx-key",
+        "body": "wx:key=\"unique\"",
+        "description": ""
+    },
+    "wx-template": {
+        "prefix": "wx-template",
+        "body": [
+            "<template name=\"\">",
+            "",
+            "</template>"
+        ],
+        "description": ""
+    },
+    "wx-template-is": {
+        "prefix": "wx-template-is",
+        "body": "<template is=\"$1\" data=\"{{$2}}\"/>",
+        "description": ""
+    },
+    "wx-bind-touchstart": {
+        "prefix": "wx-bind-touchstart",
+        "body": "bindtouchstart=\"$1\"",
+        "description": "手指触摸动作开始"
+    },
+    "wx-bind-touchmove": {
+        "prefix": "wx-bind-touchmove",
+        "body": "bindtouchmove=\"$1\"",
+        "description": "手指触摸后移动"
+    },
+    "wx-bind-touchcancel": {
+        "prefix": "wx-bind-touchcancel",
+        "body": "bindtouchcancel=\"$1\"",
+        "description": "手指触摸动作被打断，如来电提醒，弹窗"
+    },
+    "wx-bind-touchend": {
+        "prefix": "wx-bind-touchend",
+        "body": "bindtouchend=\"$1\"",
+        "description": "手指触摸动作结束"
+    },
+    "wx-bind-tap": {
+        "prefix": "wx-bind-tap",
+        "body": "bindtap=\"$1\"",
+        "description": "手指触摸后马上离开"
+    },
+    "wx-bind-longtap": {
+        "prefix": "wx-bind-longtap",
+        "body": "bindlongtap=\"$1\"",
+        "description": "手指触摸后，超过350ms再离开"
+    },
+    "wx-catch-touchstart": {
+        "prefix": "wx-catch-touchstart",
+        "body": "catchtouchstart=\"$1\"",
+        "description": "手指触摸动作开始"
+    },
+    "wx-catch-touchmove": {
+        "prefix": "wx-catch-touchmove",
+        "body": "catchtouchmove=\"$1\"",
+        "description": "手指触摸后移动"
+    },
+    "wx-catch-touchcancel": {
+        "prefix": "wx-catch-touchcancel",
+        "body": "catchtouchcancel=\"$1\"",
+        "description": "手指触摸动作被打断，如来电提醒，弹窗"
+    },
+    "wx-catch-touchend": {
+        "prefix": "wx-catch-touchend",
+        "body": "catchtouchend=\"$1\"",
+        "description": "手指触摸动作结束"
+    },
+    "wx-catch-tap": {
+        "prefix": "wx-catch-tap",
+        "body": "catchtap=\"$1\"",
+        "description": "手指触摸后马上离开"
+    },
+    "wx-catch-longtap": {
+        "prefix": "wx-catch-longtap",
+        "body": "catchlongtap=\"$1\"",
+        "description": "手指触摸后，超过350ms再离开"
+    },
+    "wx-data": {
+        "prefix": "wx-data",
+        "body": "data-$1=\"$2\"",
+        "description": ""
+    },
+    "wx-import": {
+        "prefix": "wx-import",
+        "body": [
+            "<import src=\"$1\"/>",
+            "<template is=\"$2\" data=\"{{$3}}\"/>"
+        ],
+        "description": ""
+    },
+    "wx-include": {
+        "prefix": "wx-include",
+        "body": "<include src=\"$1\"/>",
+        "description": ""
+    },
+    "wx-view": {
+        "prefix": "wx-view",
+        "body": [
+            "<view class=\"$1\">",
+            "$2",
+            "</view>"
+        ],
+        "description": "视图容器。"
+    },
+    "wx-view-hover": {
+        "prefix": "wx-view-hover",
+        "body": [
+            "<view class=\"$1\" hover=\"true\" hover-class=\"$2\" hover-start-time=50 hover-stay-time=400>",
+            "$3",
+            "</view>"
+        ],
+        "description": ""
+    },
+    "wx-scroll-view": {
+        "prefix": "wx-scroll-view",
+        "body": [
+            "<scroll-view class=\"$1\">",
+            "$2",
+            "</scroll-view>"
+        ],
+        "description": "可滚动视图区域。"
+    },
+    "wx--scroll-view-scroll-x": {
+        "prefix": "wx-scroll-x",
+        "body": " scroll-x=\"true\"",
+        "description": "允许横向滚动"
+    },
+    "wx--scroll-view-scroll-y": {
+        "prefix": "wx-scroll-y",
+        "body": "scroll-y=\"true\"",
+        "description": "允许纵向滚动"
+    },
+    "wx--scroll-view-upper-threshold": {
+        "prefix": "wx-scroll-upper-threshold",
+        "body": "upper-threshold=\"50\"",
+        "description": "距顶部/左边多远时（单位px），触发 scrolltoupper 事件"
+    },
+    "wx--scroll-view-lower-threshold": {
+        "prefix": "wx-scroll-lower-threshold",
+        "body": "lower-threshold=\"50\"",
+        "description": "距底部/右边多远时（单位px），触发 scrolltolower 事件"
+    },
+    "wx--scroll-view-scroll-top": {
+        "prefix": "wx-scroll-top",
+        "body": "scroll-top=\"\"",
+        "description": "设置竖向滚动条位置"
+    },
+    "wx--scroll-view-scroll-left": {
+        "prefix": "wx-scroll-left",
+        "body": "scroll-left=\"\"",
+        "description": "设置横向滚动条位置"
+    },
+    "wx--scroll-view-scroll-into-view": {
+        "prefix": "wx-scroll-into-view",
+        "body": "scroll-into-view=\"\"",
+        "description": "值应为某子元素id，则滚动到该元素，元素顶部对齐滚动区域顶部"
+    },
+    "wx--scroll-view-bindscrolltoupper": {
+        "prefix": "wx-scroll-bindscrolltoupper",
+        "body": "bindscrolltoupper=\"\"",
+        "description": "滚动到顶部/左边，会触发 scrolltoupper 事件"
+    },
+    "wx--scroll-view-bindscrolltolower": {
+        "prefix": "wx-scroll-bindscrolltolower",
+        "body": "bindscrolltolower=\"\"",
+        "description": "滚动到底部/右边，会触发 scrolltolower 事件"
+    },
+    "wx--scroll-view-bindscroll": {
+        "prefix": "wx-scroll-bindscroll",
+        "body": "bindscroll=\"\"",
+        "description": "滚动时触发，event.detail = {scrollLeft, scrollTop, scrollHeight, scrollWidth, deltaX, deltaY}"
+    },
+    "wx-swiper": {
+        "prefix": "wx-swiper",
+        "body": [
+            "<swiper>",
+            "$1",
+            "</swiper>"
+        ],
+        "description": "滑块视图容器。"
+    },
+    "wx-swiper-item": {
+        "prefix": "wx-swiper-item",
+        "body": [
+            "<swiper-item>",
+            "$1",
+            "</swiper-item>"
+        ],
+        "description": ""
+    },
+    "wx--swiper-indicator-dots": {
+        "prefix": "wx--swiper-indicator-dots",
+        "body": "indicator-dots=\"${1:false}\"",
+        "description": "是否显示面板指示点"
+    },
+    "wx--swiper-indicator-color": {
+        "prefix": "wx--swiper-indicator-color",
+        "body": "indicator-color=\"${1:rgba(0, 0, 0, .3)}\"",
+        "description": "指示点颜色 （这个属性目前暂未启用）"
+    },
+    "wx--swiper-indicator-active-color": {
+        "prefix": "wx--swiper-indicator-active-color",
+        "body": "indicator-active-color=\"${1:#000000}\"",
+        "description": "当前选中的指示点颜色 （这个属性目前暂未启用）"
+    },
+    "wx--swiper-autoplay": {
+        "prefix": "wx--swiper-autoplay",
+        "body": "autoplay=\"${1:false}\"",
+        "description": "是否自动切换"
+    },
+    "wx--swiper-current": {
+        "prefix": "wx--swiper-current",
+        "body": "current=\"${1:0}\"",
+        "description": "当前所在页面的 index"
+    },
+    "wx--swiper-interval": {
+        "prefix": "wx--swiper-interval",
+        "body": "interval=\"${1:5000}\"",
+        "description": "自动切换时间间隔"
+    },
+    "wx--swiper-duration": {
+        "prefix": "wx--swiper-duration",
+        "body": "duration=\"${1:500}\"",
+        "description": "滑动动画时长"
+    },
+    "wx--swiper-circular": {
+        "prefix": "wx--swiper-circular",
+        "body": "circular=\"${1:false}\"",
+        "description": "是否采用衔接滑动"
+    },
+    "wx--swiper-bindchange": {
+        "prefix": "wx--swiper-bindchange",
+        "body": "bindchange=\"$1\"",
+        "description": "current 改变时会触发 change 事件，event.detail = {current: current}"
+    },
+    "wx-icon": {
+        "prefix": "wx-icon",
+        "body": "<icon type=\"\" size=\"23\" color=\"\"/>",
+        "description": "图标。"
+    },
+    "wx-text": {
+        "prefix": "wx-text",
+        "body": "<text>$1</text>",
+        "description": "文本。"
+    },
+    "wx-text-selectable": {
+        "prefix": "wx-text-selectable",
+        "body": "selectable",
+        "description": "长按复制"
+    },
+    "wx-progress": {
+        "prefix": "wx-progress",
+        "body": "<progress percent=\"$1\" />",
+        "description": "进度条。"
+    },
+    "wx-progress-show-info": {
+        "prefix": "wx-progress-show-info",
+        "body": "show-info=\"${1:false}\"",
+        "description": "在进度条右侧显示百分比"
+    },
+    "wx-progress-stroke-width": {
+        "prefix": "wx-progress-stroke-width",
+        "body": "stroke-width=\"${1:6}\"",
+        "description": "进度条线的宽度，单位px"
+    },
+    "wx-progress-color": {
+        "prefix": "wx-progress-color",
+        "body": "color=\"${1:#09BB07}\"",
+        "description": "进度条颜色"
+    },
+    "wx-progress-active": {
+        "prefix": "wx-progress-active",
+        "body": "active=\"${1:false}\"",
+        "description": "进度条从左往右的动画"
+    },
+    "wx-button": {
+        "prefix": "wx-button",
+        "body": "<button>$1</button>",
+        "description": "按钮。"
+    },
+    "wx-button-size": {
+        "prefix": "wx-button-size",
+        "body": "size=\"${1:default}\"",
+        "description": "有效值 default, mini"
+    },
+    "wx-button-type": {
+        "prefix": "wx-button-type",
+        "body": "type=\"${1:default}\"",
+        "description": "按钮的样式类型，有效值 primary, default, warn"
+    },
+    "wx-button-plain": {
+        "prefix": "wx-button-plain",
+        "body": "plain=\"${1:false}\"",
+        "description": "按钮是否镂空，背景色透明"
+    },
+    "wx-button-disabled": {
+        "prefix": "wx-button-disabled",
+        "body": "disabled=\"${1:false}\"",
+        "description": "是否禁用"
+    },
+    "wx-button-loading": {
+        "prefix": "wx-button-loading",
+        "body": "loading=\"${1:false}\"",
+        "description": "名称前是否带 loading 图标"
+    },
+    "wx-button-form-type": {
+        "prefix": "wx-button-form-type",
+        "body": "form-type=\"${1:submit}\"",
+        "description": "有效值：submit, reset，用于 <form/> 组件，点击分别会触发 submit/reset 事件"
+    },
+    "wx-button-hover-class": {
+        "prefix": "wx-button-hover-class",
+        "body": "hover-class=\"${1:button-hover}\"",
+        "description": "指定按钮按下去的样式类。当 hover-class=\"none\" 时，没有点击态效果"
+    },
+    "wx-button-hover-start-time": {
+        "prefix": "wx-button-hover-start-time",
+        "body": "hover-start-time=\"${1:50}\"",
+        "description": "按住后多久出现点击态，单位毫秒"
+    },
+    "wx-button-hover-stay-time": {
+        "prefix": "wx-button-hover-stay-time",
+        "body": "hover-stay-time=\"${1:400}\"",
+        "description": "手指松开后点击态保留时间，单位毫秒"
+    },
+    "wx-checkbox-group": {
+        "prefix": "wx-checkbox-group",
+        "body": [
+            "<checkbox-group name=\"\">",
+            "$2",
+            "</checkbox-group>"
+        ],
+        "description": "<checkbox-group/>中选中项发生改变是触发 change 事件，detail = {value:[选中的checkbox的value的数组]}"
+    },
+    "wx-checkbox-group-bindchange": {
+        "prefix": "wx-checkbox-group-bindchange",
+        "body": "bindchange=\"$1\"",
+        "description": ""
+    },
+    "wx-checkbox": {
+        "prefix": "wx-checkbox",
+        "body": "<label class=\"$1\"><checkbox value=\"$2\" />$3</label>",
+        "description": ""
+    },
+    "wx-checkbox-disabled": {
+        "prefix": "wx-checkbox-disabled",
+        "body": "disabled=\"$false\"",
+        "description": "是否禁用"
+    },
+    "wx-checkbox-checked": {
+        "prefix": "wx-checkbox-checked",
+        "body": "checked=\"$false\"",
+        "description": "当前是否选中，可用来设置默认选中"
+    },
+    "wx-checkbox-color": {
+        "prefix": "wx-checkbox-color",
+        "body": "color=\"$1\"",
+        "description": "checkbox的颜色，同css的color"
+    },
+    "wx-form": {
+        "prefix": "wx-form",
+        "body": [
+            "<form>",
+            "<button formType=\"submit\">$2</button>",
+            "</form>"
+        ],
+        "description": "表单，将组件内的用户输入的<switch/> <input/> <checkbox/> <slider/> <radio/> <picker/> 提交。"
+    },
+    "wx-form-report-submit": {
+        "prefix": "wx-form-report-submit",
+        "body": "report-submit=\"${1:false}\"",
+        "description": "是否返回 formId 用于发送模板消息"
+    },
+    "wx-form-bindsubmit": {
+        "prefix": "wx-form-bindsubmit",
+        "body": "bindsubmit=\"$1\"",
+        "description": "携带 form 中的数据触发 submit 事件，event.detail = {value : {'name': 'value'} , formId: ''}"
+    },
+    "wx-form-bindreset": {
+        "prefix": "wx-form-bindreset",
+        "body": "bindreset=\"$1\"",
+        "description": "表单重置时会触发 reset 事件"
+    },
+    "wx-input": {
+        "prefix": "wx-input",
+        "body": "<input name=\"\" />",
+        "description": "输入框。"
+    },
+    "wx-input-value": {
+        "prefix": "wx-input-value",
+        "body": "value=\"$1\"",
+        "description": "输入框的初始内容"
+    },
+    "wx-input-type": {
+        "prefix": "wx-input-type",
+        "body": "type=\"${1:text}\"",
+        "description": "input 的类型，有效值：text, number, idcard, digit"
+    },
+    "wx-input-password": {
+        "prefix": "wx-input-password",
+        "body": "password=\"${1:false}\"",
+        "description": "是否是密码类型"
+    },
+    "wx-input-placeholder": {
+        "prefix": "wx-input-placeholder",
+        "body": "placeholder=\"$1\"",
+        "description": "输入框为空时占位符"
+    },
+    "wx-input-placeholder-style": {
+        "prefix": "wx-input-placeholder-style",
+        "body": "placeholder-style=\"$1\"",
+        "description": "指定 placeholder 的样式"
+    },
+    "wx-input-placeholder-class": {
+        "prefix": "wx-input-placeholder-class",
+        "body": "placeholder-class=\"${1:input-placeholder}\"",
+        "description": "指定 placeholder 的样式类"
+    },
+    "wx-input-disabled": {
+        "prefix": "wx-input-disabled",
+        "body": "disabled=\"${1:false}\"",
+        "description": "是否禁用"
+    },
+    "wx-input-maxlength": {
+        "prefix": "wx-input-maxlength",
+        "body": "maxlength=\"${1:140}\"",
+        "description": "最大输入长度，设置为 -1 的时候不限制最大长度"
+    },
+    "wx-input-cursor-spacing": {
+        "prefix": "wx-input-cursor-spacing",
+        "body": "cursor-spacing=\"${1:0}\"",
+        "description": "指定光标与键盘的距离，单位 px 。取 input 距离底部的距离和 cursor-spacing 指定的距离的最小值作为光标与键盘的距离"
+    },
+    "wx-input-focus": {
+        "prefix": "wx-input-focus",
+        "body": "focus=\"${1:false}\"",
+        "description": "获取焦点"
+    },
+    "wx-input-bindinput": {
+        "prefix": "wx-input-bindinput",
+        "body": "bindinput=\"$1\"",
+        "description": "当键盘输入时，触发input事件，event.detail = {value: value}，处理函数可以直接 return 一个字符串，将替换输入框的内容。"
+    },
+    "wx-input-bindfocus": {
+        "prefix": "wx-input-bindfocus",
+        "body": "bindfocus=\"$1\"",
+        "description": "输入框聚焦时触发，event.detail = {value: value}"
+    },
+    "wx-input-bindblur": {
+        "prefix": "wx-input-bindblur",
+        "body": "bindblur=\"$1\"",
+        "description": "输入框失去焦点时触发，event.detail = {value: value}"
+    },
+    "wx-input-bindconfirm": {
+        "prefix": "wx-input-bindconfirm",
+        "body": "bindconfirm=\"$1\"",
+        "description": "点击完成按钮时触发，event.detail = {value: value}"
+    },
+    "wx-label": {
+        "prefix": "wx-label",
+        "body": [
+            "<label>",
+            "$1",
+            "</label>"
+        ],
+        "description": "目前可以绑定的控件有：<button/>, <checkbox/>, <radio/>, <switch/>。"
+    },
+    "wx-picker": {
+        "prefix": "wx-picker",
+        "body": [
+            "<picker name=\"$1\">",
+            "<view class=\"$2\">",
+            "$3",
+            "</view>",
+            "</picker>"
+        ],
+        "description": "从底部弹起的滚动选择器"
+    },
+    "wx-picker-mode": {
+        "prefix": "wx-picker-mode",
+        "body": "mode=\"$selector\"",
+        "description": "普通选择器selector，时间选择器time，日期选择器date"
+    },
+    "wx-picker-range": {
+        "prefix": "wx-picker-range",
+        "body": "range=\"${1:[]}\"",
+        "description": "mode为 selector 时，range 有效"
+    },
+    "wx-picker-range-key": {
+        "prefix": "wx-picker-range-key",
+        "body": "range-key=\"$1\"",
+        "description": "当 range 是一个 Object Array 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容"
+    },
+    "wx-picker-value": {
+        "prefix": "wx-picker-value",
+        "body": "value=\"${1:0}\"",
+        "description": "表示选择了 range 中的第几个（下标从 0 开始）; 表示选中的时间，格式为\"hh:mm\" ; 表示选中的日期，格式为\"YYYY-MM-DD\""
+    },
+    "wx-picker-bindchange": {
+        "prefix": "wx-picker-bindchange",
+        "body": "bindchange=\"$1\"",
+        "description": "value 改变时触发 change 事件，event.detail = {value: value}"
+    },
+    "wx-picker-disabled": {
+        "prefix": "wx-picker-disabled",
+        "body": "disabled=\"${1:false}\"",
+        "description": "是否禁用"
+    },
+    "wx-picker-start": {
+        "prefix": "wx-picker-start",
+        "body": "start=\"$1\"",
+        "description": "表示有效时间范围的开始，字符串格式为\"hh:mm\" ; 表示有效日期范围的开始，字符串格式为\"YYYY-MM-DD\""
+    },
+    "wx-picker-end": {
+        "prefix": "wx-picker-end",
+        "body": "end=\"$1\"",
+        "description": "表示有效时间范围的结束，字符串格式为\"hh:mm\" ; 表示有效日期范围的结束，字符串格式为\"YYYY-MM-DD\""
+    },
+    "wx-picker-fields": {
+        "prefix": "wx-picker-fields",
+        "body": "fields=\"$day\"",
+        "description": "有效值 year,month,day，表示选择器的粒度"
+    },
+    "wx-picker-view": {
+        "prefix": "wx-picker-view",
+        "body": [
+            "<picker-view>",
+            "$1",
+            "</picker-view>"
+        ],
+        "description": "嵌入页面的滚动选择器"
+    },
+    "wx-icker-view-column": {
+        "prefix": "wx-icker-view-column",
+        "body": [
+            "<picker-view-column>",
+            "$1",
+            "</picker-view-column>"
+        ],
+        "description": ""
+    },
+    "wx-picker-view-value": {
+        "prefix": "wx-picker-view-value",
+        "body": "value=\"$1\"",
+        "description": "数组中的数字依次表示 picker-view 内的 picker-view-colume 选择的第几项（下标从 0 开始），数字大于 picker-view-column 可选项长度时，选择最后一项。"
+    },
+    "wx-picker-view-indicator-style": {
+        "prefix": "wx-picker-view-indicator-style",
+        "body": "indicator-style=\"$1\"",
+        "description": "设置选择器中间选中框的样式"
+    },
+    "wx-picker-view-bindchange": {
+        "prefix": "wx-picker-view-bindchange",
+        "body": "bindchange=\"$1\"",
+        "description": "当滚动选择，value 改变时触发 change 事件，event.detail = {value: value}；value为数组，表示 picker-view 内的 picker-view-column 当前选择的是第几项（下标从 0 开始）"
+    },
+    "wx-radio-group": {
+        "prefix": "wx-radio-group",
+        "body": [
+            "<radio-group name=\"$1\">",
+            "$2",
+            "</radio-group>"
+        ],
+        "description": ""
+    },
+    "wx-radio-group-bindchange": {
+        "prefix": "wx-radio-group-bindchange",
+        "body": "bindchange=\"$1\"",
+        "description": "<radio-group/> 中的选中项发生变化时触发 change 事件，event.detail = {value: 选中项radio的value}"
+    },
+    "wx-radio": {
+        "prefix": "wx-radio",
+        "body": "<label class=\"$1\"><radio value=\"$2\" />$3</label>",
+        "description": ""
+    },
+    "wx-radio-disabled": {
+        "prefix": "wx-radio-disabled",
+        "body": "disabled=\"$false\"",
+        "description": "是否禁用"
+    },
+    "wx-radio-checked": {
+        "prefix": "wx-radio-checked",
+        "body": "checked=\"$false\"",
+        "description": "当前是否选中，可用来设置默认选中"
+    },
+    "wx-radio-color": {
+        "prefix": "wx-radio-color",
+        "body": "color=\"$1\"",
+        "description": "checkbox的颜色，同css的color"
+    },
+    "wx-slider": {
+        "prefix": "wx-slider",
+        "body": "<slider name=\"$1\" />",
+        "description": "滑动选择器。"
+    },
+    "wx-slider-min": {
+        "prefix": "wx-slider-min",
+        "body": "min=\"${1:0}\"",
+        "description": "最小值"
+    },
+    "wx-slider-max": {
+        "prefix": "wx-slider-max",
+        "body": "max=\"${1:100}\"",
+        "description": "最大值"
+    },
+    "wx-slider-step": {
+        "prefix": "wx-slider-step",
+        "body": "step=\"${1:1}\"",
+        "description": "步长，取值必须大于 0，并且可被(max - min)整除"
+    },
+    "wx-slider-disabled": {
+        "prefix": "wx-slider-disabled",
+        "body": "disabled=\"${1:false}\"",
+        "description": "是否禁用"
+    },
+    "wx-slider-value": {
+        "prefix": "wx-slider-value",
+        "body": "value=\"${1:0}\"",
+        "description": "当前取值"
+    },
+    "wx-slider-color": {
+        "prefix": "wx-slider-color",
+        "body": "color=\"${1:#e9e9e9}\"",
+        "description": "背景条的颜色"
+    },
+    "wx-slider-selected-color": {
+        "prefix": "wx-slider-selected-color",
+        "body": "selected-color=\"${1:#1aad19}\"",
+        "description": "已选择的颜色"
+    },
+    "wx-slider-show-value": {
+        "prefix": "wx-slider-show-value",
+        "body": "show-value=\"${1:false}\"",
+        "description": "是否显示当前 value"
+    },
+    "wx-slider-bindchange": {
+        "prefix": "wx-slider-bindchange",
+        "body": "bindchange=\"${1:}\"",
+        "description": "完成一次拖动后触发的事件，event.detail = {value: value}"
+    },
+    "wx-switch": {
+        "prefix": "wx-switch",
+        "body": "<switch name=\"\" />",
+        "description": "开关选择器。"
+    },
+    "wx-switch-checked": {
+        "prefix": "wx-switch-checked",
+        "body": "checked=\"${1:false}\"",
+        "description": "是否选中"
+    },
+    "wx-switch-type": {
+        "prefix": "wx-switch-type",
+        "body": "type=\"${1:switch}\"",
+        "description": "样式，有效值：switch, checkbox"
+    },
+    "wx-switch-bindchange": {
+        "prefix": "wx-switch-bindchange",
+        "body": "bindchange=\"$1\"",
+        "description": "checked 改变时触发 change 事件，event.detail={ value:checked}"
+    },
+    "wx-switch-color": {
+        "prefix": "wx-switch-color",
+        "body": "color=\"$1\"",
+        "description": "switch 的颜色，同 css 的 color"
+    },
+    "wx-textarea": {
+        "prefix": "wx-textarea",
+        "body": "<textarea name=\"$1\" />",
+        "description": "多行输入框。"
+    },
+    "wx-textarea-value": {
+        "prefix": "wx-textarea-value",
+        "body": "value=\"$1\"",
+        "description": "输入框的内容"
+    },
+    "wx-textarea-placeholder": {
+        "prefix": "wx-textarea-placeholder",
+        "body": "placeholder=\"$1\"",
+        "description": "输入框为空时占位符"
+    },
+    "wx-textarea-placeholder-style": {
+        "prefix": "wx-textarea-placeholder-style",
+        "body": "placeholder-style=\"$1\"",
+        "description": "指定 placeholder 的样式"
+    },
+    "wx-textarea-placeholder-class": {
+        "prefix": "wx-textarea-placeholder-class",
+        "body": "placeholder-class=\"${1:textarea-placeholder}\"",
+        "description": "指定 placeholder 的样式类"
+    },
+    "wx-textarea-disabled": {
+        "prefix": "wx-textarea-disabled",
+        "body": "disabled=\"${1:false}\"",
+        "description": "是否禁用"
+    },
+    "wx-textarea-maxlength": {
+        "prefix": "wx-textarea-maxlength",
+        "body": "maxlength=\"${1:140}\"",
+        "description": "最大输入长度，设置为 -1 的时候不限制最大长度"
+    },
+    "wx-textarea-focus": {
+        "prefix": "wx-textarea-focus",
+        "body": "focus=\"${1:false}\"",
+        "description": "获取焦点"
+    },
+    "wx-textarea-auto-height": {
+        "prefix": "wx-textarea-auto-height",
+        "body": "auto-height=\"${1:false}\"",
+        "description": "是否自动增高，设置auto-height时，style.height不生效"
+    },
+    "wx-textarea-fixed": {
+        "prefix": "wx-textarea-fixed",
+        "body": "fixed=\"${1:false}\"",
+        "description": "如果 textarea 是在一个 position:fixed 的区域，需要显示指定属性 fixed 为 true"
+    },
+    "wx-textarea-cursor-spacing": {
+        "prefix": "wx-textarea-cursor-spacing",
+        "body": "cursor-spacing=\"${1:0}\"",
+        "description": "指定光标与键盘的距离，单位 px 。取 textarea 距离底部的距离和 cursor-spacing 指定的距离的最小值作为光标与键盘的距离"
+    },
+    "wx-textarea-bindfocus": {
+        "prefix": "wx-textarea-bindfocus",
+        "body": "bindfocus=\"$1\"",
+        "description": "输入框聚焦时触发，event.detail = {value: value}"
+    },
+    "wx-textarea-bindblur": {
+        "prefix": "wx-textarea-bindblur",
+        "body": "bindblur=\"$1\"",
+        "description": "输入框失去焦点时触发，event.detail = {value: value}"
+    },
+    "wx-textarea-bindlinechange": {
+        "prefix": "wx-textarea-bindlinechange",
+        "body": "bindlinechange=\"$1\"",
+        "description": "输入框行数变化时调用，event.detail = {height: 0, heightRpx: 0, lineCount: 0}"
+    },
+    "wx-textarea-bindinput": {
+        "prefix": "wx-textarea-bindinput",
+        "body": "bindinput=\"$1\"",
+        "description": "当键盘输入时，触发 input 事件，event.detail = {value: value}， bindinput 处理函数的返回值并不会反映到 textarea 上"
+    },
+    "wx-textarea-bindconfirm": {
+        "prefix": "wx-textarea-bindconfirm",
+        "body": "bindconfirm=\"$1\"",
+        "description": "点击完成时， 触发 confirm 事件，event.detail = {value: value}"
+    },
+    "wx-navigator": {
+        "prefix": "wx-navigator",
+        "body": "<navigator url=\"$1\">$2</navigator>",
+        "description": "页面链接。"
+    },
+    "wx-navigator-open-type": {
+        "prefix": "wx-navigator-open-type",
+        "body": "open-type=\"${1:navigate}\"",
+        "description": "可选值 'navigate'、'redirect'、'switchTab'，对应于wx.navigateTo、wx.redirectTo、wx.switchTab的功能"
+    },
+    "wx-navigator-hover-class": {
+        "prefix": "wx-navigator-hover-class",
+        "body": "hover-class=\"${1:navigator-hover}\"",
+        "description": "指定点击时的样式类，当hover-class=\"none\"时，没有点击态效果"
+    },
+    "wx-navigator-hover-start-time": {
+        "prefix": "wx-navigator-hover-start-time",
+        "body": "hover-start-time=\"${1:50}\"",
+        "description": "按住后多久出现点击态，单位毫秒"
+    },
+    "wx-navigator-hover-stay-time": {
+        "prefix": "wx-navigator-hover-stay-time",
+        "body": "hover-stay-time=\"${1:600}\"",
+        "description": "手指松开后点击态保留时间，单位毫秒"
+    },
+    "wx-audio": {
+        "prefix": "wx-audio",
+        "body": "<audio id=\"\"></audio>",
+        "description": "音频。"
+    },
+    "wx-audio-src": {
+        "prefix": "wx-audio-src",
+        "body": "src=\"$1\"",
+        "description": "要播放音频的资源地址"
+    },
+    "wx-audio-loop": {
+        "prefix": "wx-audio-loop",
+        "body": "loop=\"${1:false}\"",
+        "description": "是否循环播放"
+    },
+    "wx-audio-controls": {
+        "prefix": "wx-audio-controls",
+        "body": "controls=\"${1:true}\"",
+        "description": "是否显示默认控件"
+    },
+    "wx-audio-poster": {
+        "prefix": "wx-audio-poster",
+        "body": "poster=\"$1\"",
+        "description": "默认控件上的音频封面的图片资源地址，如果 controls 属性值为 false 则设置 poster 无效"
+    },
+    "wx-audio-name": {
+        "prefix": "wx-audio-name",
+        "body": "name=\"$1\"",
+        "description": "默认控件上的音频名字，如果 controls 属性值为 false 则设置 name 无效"
+    },
+    "wx-audio-author": {
+        "prefix": "wx-audio-author",
+        "body": "author=\"$1\"",
+        "description": "默认控件上的作者名字，如果 controls 属性值为 false 则设置 author 无效"
+    },
+    "wx-audio-binderror": {
+        "prefix": "wx-audio-binderror",
+        "body": "binderror=\"$1\"",
+        "description": "当发生错误时触发 error 事件，detail = {errMsg: MediaError.code}\nMEDIA_ERR_ABORTED	获取资源被用户禁止\nMEDIA_ERR_NETWORD	网络错误\nMEDIA_ERR_DECODE	解码错误\nMEDIA_ERR_SRC_NOT_SUPPOERTED	不合适资源"
+    },
+    "wx-audio-bindplay": {
+        "prefix": "wx-audio-bindplay",
+        "body": "bindplay=\"$1\"",
+        "description": "当开始/继续播放时触发play事件"
+    },
+    "wx-audio-bindpause": {
+        "prefix": "wx-audio-bindpause",
+        "body": "bindpause=\"$1\"",
+        "description": "当暂停播放时触发 pause 事件"
+    },
+    "wx-audio-bindtimeupdate": {
+        "prefix": "wx-audio-bindtimeupdate",
+        "body": "bindtimeupdate=\"$1\"",
+        "description": "当播放进度改变时触发 timeupdate 事件，detail = {currentTime, duration}"
+    },
+    "wx-audio-bindended": {
+        "prefix": "wx-audio-bindended",
+        "body": "bindended=\"$1\"",
+        "description": "当播放到末尾时触发 ended 事件"
+    },
+    "wx-image": {
+        "prefix": "wx-image",
+        "body": "<image src=\"$1\"></image>",
+        "description": "图片。"
+    },
+    "wx-image-mode": {
+        "prefix": "wx-image-mode",
+        "body": "mode=\"${1:scaleToFill}\"",
+        "description": "图片裁剪、缩放的模式"
+    },
+    "wx-image-binderror": {
+        "prefix": "wx-image-binderror",
+        "body": "binderror=\"$1\"",
+        "description": "当错误发生时，发布到 AppService 的事件名，事件对象event.detail = {errMsg: 'something wrong'}"
+    },
+    "wx-image-bindload": {
+        "prefix": "wx-image-bindload",
+        "body": "bindload=\"$1\"",
+        "description": "当图片载入完毕时，发布到 AppService 的事件名，事件对象event.detail = {height:'图片高度px', width:'图片宽度px'}"
+    },
+    "wx-video": {
+        "prefix": "wx-video",
+        "body": "<video src=\"$1\"></video>",
+        "description": "视频。"
+    },
+    "wx-video-controls": {
+        "prefix": "wx-video-controls",
+        "body": "controls=\"${1:true}\"",
+        "description": "是否显示默认播放控件（播放/暂停按钮、播放进度、时间）"
+    },
+    "wx-video-danmu-list": {
+        "prefix": "wx-video-danmu-list",
+        "body": "danmu-list=\"$1\"",
+        "description": "弹幕列表"
+    },
+    "wx-video-danmu-btn": {
+        "prefix": "wx-video-danmu-btn",
+        "body": "danmu-btn=\"${1:false}\"",
+        "description": "是否显示弹幕按钮，只在初始化时有效，不能动态变更"
+    },
+    "wx-video-enable-danmu": {
+        "prefix": "wx-video-enable-danmu",
+        "body": "enable-danmu=\"${1:false}\"",
+        "description": "是否展示弹幕，只在初始化时有效，不能动态变更"
+    },
+    "wx-video-autoplay": {
+        "prefix": "wx-video-autoplay",
+        "body": "autoplay=\"${1:false}\"",
+        "description": "是否自动播放"
+    },
+    "wx-video-bindplay": {
+        "prefix": "wx-video-bindplay",
+        "body": "bindplay=\"$1\"",
+        "description": "当开始/继续播放时触发play事件"
+    },
+    "wx-video-bindpause": {
+        "prefix": "wx-video-bindpause",
+        "body": "bindpause=\"$1\"",
+        "description": "当暂停播放时触发 pause 事件"
+    },
+    "wx-video-bindended": {
+        "prefix": "wx-video-bindended",
+        "body": "bindended=\"$1\"",
+        "description": "当播放到末尾时触发 ended 事件"
+    },
+    "wx-video-bindtimeupdate": {
+        "prefix": "wx-video-bindtimeupdate",
+        "body": "bindtimeupdate=\"$1\"",
+        "description": "播放进度变化时触发，event.detail = {currentTime: '当前播放时间'} 。触发频率应该在 250ms 一次"
+    },
+    "wx-video-objectFit": {
+        "prefix": "wx-video-objectFit",
+        "body": "objectFit=\"${1:contain}\"",
+        "description": "当视频大小与 video 容器大小不一致时，视频的表现形式。contain：包含，fill：填充，cover：覆盖"
+    },
+    "wx-map": {
+        "prefix": "wx-map",
+        "body": "<map longitude=\"\" latitude=\"\"></map>",
+        "description": "地图。"
+    },
+    "wx-map-scale": {
+        "prefix": "wx-map-scale",
+        "body": "scale=\"${1:16}\"",
+        "description": "缩放级别，取值范围为5-18"
+    },
+    "wx-map-markers": {
+        "prefix": "wx-map-markers",
+        "body": "markers=\"$1\"",
+        "description": "标记点"
+    },
+    "wx-map-polyline": {
+        "prefix": "wx-map-polyline",
+        "body": "polyline=\"$1\"",
+        "description": "路线"
+    },
+    "wx-map-circles": {
+        "prefix": "wx-map-circles",
+        "body": "circles=\"$1\"",
+        "description": "圆"
+    },
+    "wx-map-controls": {
+        "prefix": "wx-map-controls",
+        "body": "controls=\"$1\"",
+        "description": "控件"
+    },
+    "wx-map-include-points": {
+        "prefix": "wx-map-include-points",
+        "body": "include-points=\"$1\"",
+        "description": "缩放视野以包含所有给定的坐标点"
+    },
+    "wx-map-show-location": {
+        "prefix": "wx-map-show-location",
+        "body": "show-location=\"$1\"",
+        "description": "显示带有方向的当前定位点"
+    },
+    "wx-map-bindmarkertap": {
+        "prefix": "wx-map-bindmarkertap",
+        "body": "bindmarkertap=\"$1\"",
+        "description": "点击标记点时触发"
+    },
+    "wx-map-bindcontroltap": {
+        "prefix": "wx-map-bindcontroltap",
+        "body": "bindcontroltap=\"$1\"",
+        "description": "点击控件时触发"
+    },
+    "wx-map-bindregionchange": {
+        "prefix": "wx-map-bindregionchange",
+        "body": "bindregionchange=\"$1\"",
+        "description": "视野发生变化时触发"
+    },
+    "wx-map-bindtap": {
+        "prefix": "wx-map-bindtap",
+        "body": "bindtap=\"$1\"",
+        "description": "点击地图时触发"
+    },
+    "wx-canvas": {
+        "prefix": "wx-canvas",
+        "body": "<canvas canvas-id=\"$1\"></canvas>",
+        "description": "画布。"
+    },
+    "wx-canvas-disable-scroll": {
+        "prefix": "wx-canvas-disable-scroll",
+        "body": "disable-scroll=\"${1:false}\"",
+        "description": "当在 canvas 中移动时，禁止屏幕滚动以及下拉刷新"
+    },
+    "wx-canvas-bindtouchstart": {
+        "prefix": "wx-canvas-bindtouchstart",
+        "body": "bindtouchstart=\"$1\"",
+        "description": "手指触摸动作开始"
+    },
+    "wx-canvas-bindtouchmove": {
+        "prefix": "wx-canvas-bindtouchmove",
+        "body": "bindtouchmove=\"$1\"",
+        "description": "手指触摸后移动"
+    },
+    "wx-canvas-bindtouchend": {
+        "prefix": "wx-canvas-bindtouchend",
+        "body": "bindtouchend=\"$1\"",
+        "description": "手指触摸动作结束"
+    },
+    "wx-canvas-bindtouchcancel": {
+        "prefix": "wx-canvas-bindtouchcancel",
+        "body": "bindtouchcancel=\"$1\"",
+        "description": "手指触摸动作被打断，如来电提醒，弹窗"
+    },
+    "wx-canvas-bindlongtap": {
+        "prefix": "wx-canvas-bindlongtap",
+        "body": "bindlongtap=\"$1\"",
+        "description": "手指长按 500ms 之后触发，触发了长按事件后进行移动不会触发屏幕的滚动"
+    },
+    "wx-canvas-binderror": {
+        "prefix": "wx-canvas-binderror",
+        "body": "binderror=\"$1\"",
+        "description": "当发生错误时触发 error 事件，detail = {errMsg: 'something wrong'}"
+    },
+    "wx-contact-button": {
+        "prefix": "wx-contact-button",
+        "body": "<contact-button type=\"default-light\" size=\"18\" session-from=\"$1\"></contact-button>",
+        "description": "客服会话按钮，用于在页面上显示一个客服会话按钮，用户点击该按钮后会进入客服会话。"
+    }
+}
