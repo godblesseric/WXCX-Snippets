@@ -5,11 +5,7 @@
     "version": "0.0.1",
     "publisher": "姜彦汐",
     "license": "",
-    "homepage": "",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/undsky/WXCX-Snippets.git"
-    },
+    "homepage": "https://github.com/undsky/WXCX-Snippets",
     "icon": "images/cx.png",
     "engines": {
         "vscode": "^0.10.1"

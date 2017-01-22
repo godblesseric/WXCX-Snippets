@@ -1,5 +1,9 @@
 # 微信小程序 snippets for vscode
 
+### 使用
+
+放在/Users/用户名/.vscode/extensions/目录下
+
 ### 触发命令：**wx**
 ### 组成
 | snippet | 对应 |
