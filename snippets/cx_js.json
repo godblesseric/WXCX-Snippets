@@ -994,7 +994,7 @@
             "title: '$1',",
             "icon: 'success',//success or loading",
             "duration: 1500",
-            "mask: 'false'",
+            "mask: 'true'",
             "});"
         ],
         "description": "显示消息提示框"

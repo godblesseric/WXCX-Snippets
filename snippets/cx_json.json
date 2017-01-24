@@ -79,5 +79,10 @@
             "\"disableScroll\": false"
         ],
         "description": ""
+    },
+    "wx-page-title": {
+        "prefix": "wx-page",
+        "body": "\"navigationBarTitleText\": \"\",",
+        "description": ""
     }
 }
