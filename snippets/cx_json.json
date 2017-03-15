@@ -1,15 +1,16 @@
+// https://mp.weixin.qq.com/debug/wxadoc/dev/framework/config.html
 {
-    "wx-pages": {
-        "prefix": "wx-pages",
+    "cx-pages": {
+        "prefix": "cx-pages",
         "body": [
             "\"pages\": [",
-            "$page",
+            "\"$page\"",
             "]"
         ],
-        "description": ""
+        "description": "设置页面路径"
     },
-    "wx-window": {
-        "prefix": "wx-window",
+    "cx-window": {
+        "prefix": "cx-window",
         "body": [
             "\"window\": {",
             "\"navigationBarBackgroundColor\": \"#000000\",",
@@ -20,38 +21,51 @@
             "\"enablePullDownRefresh\": false",
             "}"
         ],
-        "description": "用于设置小程序的状态栏、导航条、标题、窗口背景色。"
+        "description": "设置默认页面的窗口表现"
     },
-    "wx-tabBar": {
-        "prefix": "wx-tabBar",
+    "cx-navigationBar-style": {
+        "prefix": "cx-navigationBar-style",
+        "body": [
+            "\"navigationBarBackgroundColor\": \"#000000\",",
+            "\"navigationBarTextStyle\": \"white\","
+        ],
+        "description": ""
+    },
+    "cx-navigationBar-title": {
+        "prefix": "cx-navigationBar-title",
+        "body": "\"navigationBarTitleText\": \"$1\",",
+        "description": ""
+    },
+    "cx-tabBar": {
+        "prefix": "cx-tabBar",
         "body": [
             "\"tabBar\": {",
-            "\"color\": \"\",",
-            "\"selectedColor\": \"\",",
-            "\"backgroundColor\": \"\",",
-            "\"borderStyle\": \"white\",",
+            "\"color\": \"$color\",",
+            "\"selectedColor\": \"$selectedColor\",",
+            "\"backgroundColor\": \"$backgroundColor\",",
+            "\"borderStyle\": \"black\",",
             "\"position\": \"bottom\",",
             "\"list\": [",
-            "$tab",
+            "$tabs",
             "]",
             "}"
         ],
-        "description": ""
+        "description": "设置底部 tab 的表现"
     },
-    "wx-tab": {
-        "prefix": "wx-tab",
+    "cx-tab": {
+        "prefix": "cx-tab",
         "body": [
             "{",
-            "\"pagePath\": \"\",",
-            "\"iconPath\": \"\",",
-            "\"selectedIconPath\": \"\",",
-            "\"text\": \"\"",
+            "\"pagePath\": \"$pagePath\",",
+            "\"iconPath\": \"$iconPath\",",
+            "\"selectedIconPath\": \"$selectedIconPath\",",
+            "\"text\": \"$text\"",
             "}"
         ],
         "description": ""
     },
-    "wx-networkTimeout": {
-        "prefix": "wx-networkTimeout",
+    "cx-networkTimeout": {
+        "prefix": "cx-networkTimeout",
         "body": [
             "\"networkTimeout\": {",
             "\"request\": 60000,",
@@ -60,15 +74,15 @@
             "\"downloadFile\": 60000",
             "}"
         ],
-        "description": "可以设置各种网络请求的超时时间。"
+        "description": "设置网络超时时间"
     },
-    "wx-debug": {
-        "prefix": "wx-debug",
+    "cx-debug": {
+        "prefix": "cx-debug",
         "body": "\"debug\": true",
-        "description": ""
+        "description": "设置是否开启 debug 模式"
     },
-    "wx-page": {
-        "prefix": "wx-page",
+    "cx-page": {
+        "prefix": "cx-page",
         "body": [
             "\"navigationBarBackgroundColor\": \"#000000\",",
             "\"navigationBarTextStyle\": \"white\",",
@@ -80,9 +94,9 @@
         ],
         "description": ""
     },
-    "wx-page-title": {
-        "prefix": "wx-page",
-        "body": "\"navigationBarTitleText\": \"\",",
+    "cx-refresh": {
+        "prefix": "cx-refresh",
+        "body": "\"enablePullDownRefresh\": true,",
         "description": ""
     }
 }

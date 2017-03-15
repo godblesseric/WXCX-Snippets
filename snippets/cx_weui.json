@@ -1,0 +1,612 @@
+// https://github.com/weui/weui-wxss
+{
+	"cx-import": {
+		"prefix": "cx-import",
+		"body": "@import '$1';",
+		"description": "样式导入"
+	},
+	"weui-button": {
+		"prefix": "weui-button",
+		"body": "<button class=\"weui-btn\">$1</button>",
+		"description": ""
+	},
+	"weui-button-mini": {
+		"prefix": "weui-button-mini",
+		"body": "<button class=\"weui-btn mini-btn\" size=\"mini\">$1</button>",
+		"description": ""
+	},
+	"weui-button-area": {
+		"prefix": "weui-button-area",
+		"body": [
+			"<view class=\"weui-btn-area\">",
+			"$1",
+			" </view>"
+		],
+		"description": ""
+	},
+	"weui-list-title": {
+		"prefix": "weui-list-title",
+		"body": "<view class=\"weui-cells__title\">$1</view>",
+		"description": ""
+	},
+	"weui-list": {
+		"prefix": "weui-list",
+		"body": [
+			"<view class=\"weui-cells weui-cells_after-title\">",
+			"$1",
+			"</view>"
+		],
+		"description": ""
+	},
+	"weui-list-cell-navigator": {
+		"prefix": "weui-list-cell",
+		"body": [
+			"<navigator url=\"\" class=\"weui-cell weui-cell_access\" hover-class=\"weui-cell_active\">",
+			"$1",
+			"</navigator>"
+		],
+		"description": ""
+	},
+	"weui-list-cell-link": {
+		"prefix": "weui-list-cell-link",
+		"body": [
+			"<view class=\"weui-cell weui-cell_link\">",
+			"<view class=\"weui-cell__bd\">$1</view>",
+			"</view>"
+		],
+		"description": ""
+	},
+	"weui-list-cell-tips": {
+		"prefix": "weui-list-cell-tips",
+		"body": "<view class=\"weui-cells__tips\">$1</view>",
+		"description": ""
+	},
+	"weui-list-cell-body": {
+		"prefix": "weui-list-cell-body",
+		"body": "<view class=\"weui-cell__bd\">$1</view>",
+		"description": ""
+	},
+	"weui-list-cell-header": {
+		"prefix": "weui-list-cell-header",
+		"body": "<view class=\"weui-cell__hd\">$1</view>",
+		"description": ""
+	},
+	"weui-list-cell-header-image": {
+		"prefix": "weui-list-cell-header-image",
+		"body": [
+			"<view class=\"weui-cell__hd\">",
+			"<image src=\"\" class=\"weui-cell_img\"></image>",
+			"</view>"
+		],
+		"description": ""
+	},
+	"weui-list-cell-footer": {
+		"prefix": "weui-list-cell-footer",
+		"body": "<view class=\"weui-cell__ft\">$1</view>",
+		"description": ""
+	},
+	"weui-list-cell-footer-image": {
+		"prefix": "weui-list-cell-footer-image",
+		"body": [
+			"<view class=\"weui-cell__ft\">",
+			"<image src=\"\" class=\"weui-cell_img\"></image>",
+			"</view>"
+		],
+		"description": ""
+	},
+	"weui-list-cell-footer-arrow": {
+		"prefix": "weui-list-cell-footer-arrow",
+		"body": "<view class=\"weui-cell__ft weui-cell__ft_in-access\">$1</view>",
+		"description": ""
+	},
+	"weui-form-radio": {
+		"prefix": "weui-form-radio",
+		"body": [
+			"<view class=\"weui-cells weui-cells_after-title\">",
+			"<radio-group bindchange=\"$change\">",
+			"<label class=\"weui-cell weui-check__label\" wx:for=\"{{$data}}\" wx:key=\"{{$key}}\">",
+			"<radio class=\"weui-check\" value=\"{{$value}}\" checked=\"{{$checked}}\"/>",
+			"<view class=\"weui-cell__bd\">{{$body}}</view>",
+			"<view class=\"weui-cell__ft weui-cell__ft_in-radio\" wx:if=\"{{$checked}}\">",
+			"<icon class=\"weui-icon-radio\" type=\"success_no_circle\" size=\"16\"></icon>",
+			"</view>",
+			"</label>",
+			"</radio-group>",
+			"</view>"
+		],
+		"description": ""
+	},
+	"weui-form-checkbox": {
+		"prefix": "weui-form-checkbox",
+		"body": [
+			"<view class=\"weui-cells weui-cells_after-title\">",
+			"<radio-group bindchange=\"$change\">",
+			"<label class=\"weui-cell weui-check__label\" wx:for=\"{{$data}}\" wx:key=\"{{$key}}\">",
+			"<checkbox class=\"weui-check\" value=\"{{$value}}\" checked=\"{{$checked}}\"/>",
+			"<view class=\"weui-cell__hd weui-check__hd_in-checkbox\">",
+			"<icon class=\"weui-icon-checkbox_circle\" type=\"circle\" size=\"23\" wx:if=\"{{!$checked}}\"></icon>",
+			"<icon class=\"weui-icon-checkbox_success\" type=\"success\" size=\"23\" wx:if=\"{{$checked}}\"></icon>",
+			"</view>",
+			"<view class=\"weui-cell__bd\">{{$body}}</view>",
+			"</label>",
+			"</radio-group>",
+			"</view>"
+		],
+		"description": ""
+	},
+	"weui-form-input-title": {
+		"prefix": "weui-form-input-title",
+		"body": [
+			"<view class=\"weui-cell weui-cell_input\">",
+			"<view class=\"weui-cell__hd\">",
+			"<view class=\"weui-label\">$title</view>",
+			"</view>",
+			"<view class=\"weui-cell__bd\">",
+			"<input class=\"weui-input\" placeholder=\"$placeholder\"/>",
+			"</view>",
+			"</view>"
+		],
+		"description": ""
+	},
+	"weui-form-input-title-button": {
+		"prefix": "weui-form-input-title-button",
+		"body": [
+			"<view class=\"weui-cell weui-cell_input\">",
+			"<view class=\"weui-cell__hd\">",
+			"<view class=\"weui-label\">$title</view>",
+			"</view>",
+			"<view class=\"weui-cell__bd\">",
+			"<input class=\"weui-input\" placeholder=\"$placeholder\"/>",
+			"</view>",
+			"<view class=\"weui-cell__ft\">",
+			"<view class=\"weui-vcode-btn\">$1</view>",
+			"</view>",
+			"</view>"
+		],
+		"description": ""
+	},
+	"weui-form-date": {
+		"prefix": "weui-form-date",
+		"body": [
+			"<view class=\"weui-cell weui-cell_input\">",
+			"<view class=\"weui-cell__hd\">",
+			"<view class=\"weui-label\">$title</view>",
+			"</view>",
+			"<view class=\"weui-cell__bd\">",
+			"<picker mode=\"date\" value=\"{{$date}}\" start=\"$start\" end=\"$end\" bindchange=\"$change\">",
+			"<view class=\"weui-input\">{{$date}}</view>",
+			"</picker>",
+			"</view>",
+			"</view>"
+		],
+		"description": ""
+	},
+	"weui-form-time": {
+		"prefix": "weui-form-time",
+		"body": [
+			"<view class=\"weui-cell weui-cell_input\">",
+			"<view class=\"weui-cell__hd\">",
+			"<view class=\"weui-label\">$title</view>",
+			"</view>",
+			"<view class=\"weui-cell__bd\">",
+			"<picker mode=\"time\" value=\"{{$time}}\" start=\"$start\" end=\"$end\" bindchange=\"$change\">",
+			"<view class=\"weui-input\">{{$time}}</view>",
+			"</picker>",
+			"</view>",
+			"</view>"
+		],
+		"description": ""
+	},
+	"weui-form-vcode": {
+		"prefix": "weui-form-vcode",
+		"body": [
+			"<view class=\"weui-cell weui-cell_input weui-cell_vcode\">",
+			"<view class=\"weui-cell__hd\">",
+			"<view class=\"weui-label\">$title</view>",
+			"</view>",
+			"<view class=\"weui-cell__bd\">",
+			"<input class=\"weui-input\" placeholder=\"$placeholder\"/>",
+			"</view>",
+			"<view class=\"weui-cell__ft\">",
+			"<image class=\"weui-vcode-img\" src=\"\" style=\"width: 108px\"></image>",
+			"</view>",
+			"</view>"
+		],
+		"description": ""
+	},
+	"weui-form-error": {
+		"prefix": "weui-form-error",
+		"body": [
+			"<view class=\"weui-cell weui-cell_input weui-cell_warn\">",
+			"<view class=\"weui-cell__hd\">",
+			"<view class=\"weui-label\">$title</view>",
+			"</view>",
+			"<view class=\"weui-cell__bd\">",
+			"<input class=\"weui-input\" placeholder=\"$placeholder\"/>",
+			"</view>",
+			"<view class=\"weui-cell__ft\">",
+			"<icon type=\"warn\" size=\"23\" color=\"#E64340\"></icon>",
+			"</view>",
+			"</view>"
+		],
+		"description": ""
+	},
+	"weui-form-switch": {
+		"prefix": "weui-form-switch",
+		"body": [
+			"<view class=\"weui-cell weui-cell_switch\">",
+			"<view class=\"weui-cell__hd\">",
+			"<view class=\"weui-label\">$title</view>",
+			"</view>",
+			"<view class=\"weui-cell__ft\">",
+			"<switch checked />",
+			"</view>",
+			"</view>"
+		],
+		"description": ""
+	},
+	"weui-form-input": {
+		"prefix": "weui-form-input",
+		"body": [
+			"<view class=\"weui-cell weui-cell_input\">",
+			"<view class=\"weui-cell__bd\">",
+			"<input class=\"weui-input\" placeholder=\"$placeholder\"/>",
+			"</view>",
+			"</view>"
+		],
+		"description": ""
+	},
+	"weui-form-textarea": {
+		"prefix": "weui-form-textarea",
+		"body": [
+			"<view class=\"weui-cell\">",
+			"<view class=\"weui-cell__bd\">",
+			"<textarea class=\"weui-textarea\" placeholder=\"$placeholder\" style=\"height: 3.3em\" />",
+			"<view class=\"weui-textarea-counter\"></view>",
+			"</view>",
+			"</view>"
+		],
+		"description": ""
+	},
+	"weui-form-select": {
+		"prefix": "weui-form-select",
+		"body": [
+			"<view class=\"weui-cell weui-cell_select\">",
+			"<view class=\"weui-cell__bd\">",
+			"<picker bindchange=\"$change\" value=\"{{$value}}\" range=\"{{$range}}\">",
+			"<view class=\"weui-select\">{{$range[$value]}}</view>",
+			"</picker>",
+			"</view>",
+			"</view>"
+		],
+		"description": ""
+	},
+	"weui-form-select-before": {
+		"prefix": "weui-form-select-before",
+		"body": [
+			"<view class=\"weui-cell weui-cell_select\">",
+			"<view class=\"weui-cell__hd\" style=\"width: 105px\">",
+			"<picker bindchange=\"$change\" value=\"{{$value}}\" range=\"{{$range}}\">",
+			"<view class=\"weui-select\">{{$range[$value]}}</view>",
+			"</picker>",
+			"</view>",
+			"<view class=\"weui-cell__bd weui-cell__bd_in-select-before\">",
+			"<input class=\"weui-input\" placeholder=\"$placeholder\"/>",
+			"</view>",
+			"</view>"
+		],
+		"description": ""
+	},
+	"weui-form-select-after": {
+		"prefix": "weui-form-select-after",
+		"body": [
+			"<view class=\"weui-cell weui-cell_select\">",
+			"<view class=\"weui-cell__hd weui-cell__hd_in-select-after\">",
+			"<view class=\"weui-label\">$title</view>",
+			"</view>",
+			"<view class=\"weui-cell__bd\">",
+			"<picker bindchange=\"$change\" value=\"{{$value}}\" range=\"{{$range}}\">",
+			"<view class=\"weui-select\">{{$range[$value]}}</view>",
+			"</picker>",
+			"</view>",
+			"</view>"
+		],
+		"description": ""
+	},
+	"weui-form-agree": {
+		"prefix": "weui-form-agree",
+		"body": [
+			"<checkbox-group bindchange=\"$change\">",
+			"<label class=\"weui-agree\" for=\"weuiAgree\">",
+			"<view class=\"weui-agree__text\">",
+			"<checkbox class=\"weui-agree__checkbox\" id=\"weuiAgree\" value=\"agree\" checked=\"{{$isAgree}}\" />",
+			"<view class=\"weui-agree__checkbox-icon\">",
+			"<icon class=\"weui-agree__checkbox-icon-check\" type=\"success_no_circle\" size=\"9\" wx:if=\"{{$isAgree}}\"></icon>",
+			"</view>",
+			"$info",
+			"<navigator url=\"\" class=\"weui-agree__link\">$link</navigator>",
+			"</view>",
+			"</label>",
+			"</checkbox-group>"
+		],
+		"description": ""
+	},
+	"weui-form-preview": {
+		"prefix": "weui-form-preview",
+		"body": [
+			"<view class=\"weui-form-preview\">",
+			"<view class=\"weui-form-preview__hd\">",
+			"<view class=\"weui-form-preview__item\">",
+			"<view class=\"weui-form-preview__label\">$1</view>",
+			"<view class=\"weui-form-preview__value_in-hd\">$2</view>",
+			"</view>",
+			"</view>",
+			"<view class=\"weui-form-preview__bd\">",
+			"<view class=\"weui-form-preview__item\">",
+			"<view class=\"weui-form-preview__label\">$3</view>",
+			"<view class=\"weui-form-preview__value\">$4</view>",
+			"</view>",
+			"</view>",
+			"<view class=\"weui-form-preview__ft\">",
+			"<navigator url=\"\" class=\"weui-form-preview__btn weui-form-preview__btn_primary\" hover-class=\"weui-form-preview__btn_active\">$5</navigator>",
+			"</view>",
+			"</view>"
+		],
+		"description": ""
+	},
+	"weui-uploader": {
+		"prefix": "weui-uploader",
+		"body": [
+			"<view class=\"weui-cells\">",
+			"<view class=\"weui-cell\">",
+			"<view class=\"weui-cell__bd\">",
+			"<view class=\"weui-uploader\">",
+			"<view class=\"weui-uploader__hd\">",
+			"<view class=\"weui-uploader__title\">$title</view>",
+			"<view class=\"weui-uploader__info\">$info</view>",
+			"</view>",
+			"<view class=\"weui-uploader__bd\">",
+			"<view class=\"weui-uploader__files\">",
+			"<block wx:for-items=\"{{$files}}\">",
+			"<view class=\"weui-uploader__file\" bindtap=\"previewImage\" id=\"{{item}}\">",
+			"<image class=\"weui-uploader__img\" src=\"{{item}}\" mode=\"aspectFill\" />",
+			"</view>",
+			"</block>",
+			"<view class=\"weui-uploader__input-box\">",
+			"<view class=\"weui-uploader__input\" bindtap=\"chooseImage\"></view>",
+			"</view>",
+			"</view>",
+			"</view>",
+			"</view>",
+			"</view>"
+		],
+		"description": ""
+	},
+	"weui-article": {
+		"prefix": "weui-article",
+		"body": [
+			"<view class=\"weui-article\">",
+			"<view class=\"weui-article__h1\">$title1</view>",
+			"<view class=\"weui-article__section\">",
+			"<view class=\"weui-article__title\">$title2</view>",
+			"<view class=\"weui-article__section\">",
+			"<view class=\"weui-article__h3\">$title3</view>",
+			"<view class=\"weui-article__p\">",
+			"$content",
+			"</view>",
+			"<view class=\"weui-article__p\">",
+			"<image class=\"weui-article__img\" src=\"\" mode=\"aspectFit\" style=\"height: 180px\" />",
+			"</view>"
+		],
+		"description": ""
+	},
+	"weui-badge": {
+		"prefix": "weui-badge",
+		"body": "<view class=\"weui-badge\">$badge</view>",
+		"description": ""
+	},
+	"weui-badge-dot": {
+		"prefix": "weui-badge-dot",
+		"body": "<view class=\"weui-badge weui-badge_dot\"></view>",
+		"description": ""
+	},
+	"weui-flex": {
+		"prefix": "weui-flex",
+		"body": [
+			"<view class=\"weui-flex\">",
+			"<view class=\"weui-flex__item\">",
+			"$1",
+			"</view>",
+			"</view>"
+		],
+		"description": ""
+	},
+	"weui-footer": {
+		"prefix": "weui-footer",
+		"body": [
+			"<view class=\"weui-footer\">",
+			"<view class=\"weui-footer__text\">$text</view>",
+			"</view>"
+		],
+		"description": ""
+	},
+	"weui-footer-link": {
+		"prefix": "weui-footer-link",
+		"body": [
+			"<view class=\"weui-footer\">",
+			" <view class=\"weui-footer__links\">",
+			"<navigator url=\"\" class=\"weui-footer__link\">$link</navigator>",
+			"</view>",
+			"<view class=\"weui-footer__text\">$text</view>",
+			"</view>"
+		],
+		"description": ""
+	},
+	"weui-grid": {
+		"prefix": "weui-grid",
+		"body": [
+			"<view class=\"weui-grids\">",
+			"<navigator url=\"\" class=\"weui-grid\" hover-class=\"weui-grid_active\">",
+			"<image class=\"weui-grid__icon\" src=\"\" />",
+			"<view class=\"weui-grid__label\">$1</view>",
+			"</navigator>",
+			"</view>"
+		],
+		"description": ""
+	},
+	"weui-icon-box": {
+		"prefix": "weui-icon-box",
+		"body": [
+			"<view class=\"icon-box\">",
+			"<icon type=\"$type\"/>",
+			"<view class=\"icon-box__ctn\">",
+			"<view class=\"icon-box__title\">$title</view>",
+			"<view class=\"icon-box__desc\">$desc</view>",
+			"</view>",
+			"</view>"
+		],
+		"description": ""
+	},
+	"weui-loadmore": {
+		"prefix": "weui-loadmore",
+		"body": [
+			"<view class=\"weui-loadmore\">",
+			"<view class=\"weui-loading\"></view>",
+			"<view class=\"weui-loadmore__tips\">正在加载</view>",
+			"</view>"
+		],
+		"description": ""
+	},
+	"weui-loadmore-line": {
+		"prefix": "weui-loadmore-line",
+		"body": [
+			"<view class=\"weui-loadmore weui-loadmore_line\">",
+			"<view class=\"weui-loadmore__tips weui-loadmore__tips_in-line\">$tips</view>",
+			"</view>"
+		],
+		"description": ""
+	},
+	"weui-panel": {
+		"prefix": "weui-panel",
+		"body": [
+			"<view class=\"weui-panel weui-panel_access\">",
+			"$1",
+			"</view>"
+		],
+		"description": ""
+	},
+	"weui-panel-header": {
+		"prefix": "weui-panel-header",
+		"body": "<view class=\"weui-panel__hd\">$header</view>",
+		"description": ""
+	},
+	"weui-panel-body": {
+		"prefix": "weui-panel-body",
+		"body": [
+			" <view class=\"weui-panel__bd\">",
+			"$1",
+			"</view>"
+		],
+		"description": ""
+	},
+	"weui-panel-footer": {
+		"prefix": "weui-panel-footer",
+		"body": [
+			"<view class=\"weui-panel__ft\">",
+			"$1",
+			"</view>"
+		],
+		"description": ""
+	},
+	"weui-media-thumb": {
+		"prefix": "weui-media-thumb",
+		"body": [
+			"<navigator url=\"\" class=\"weui-media-box weui-media-box_appmsg\" hover-class=\"weui-cell_active\">",
+			"<view class=\"weui-media-box__hd weui-media-box__hd_in-appmsg\">",
+			"<image class=\"weui-media-box__thumb\" src=\"\" />",
+			"</view>",
+			"<view class=\"weui-media-box__bd weui-media-box__bd_in-appmsg\">",
+			"<view class=\"weui-media-box__title\">$title</view>",
+			"<view class=\"weui-media-box__desc\">$desc</view>",
+			"</view>",
+			"</navigator>"
+		],
+		"description": ""
+	},
+	"weui-media": {
+		"prefix": "weui-media",
+		"body": [
+			"<view class=\"weui-media-box weui-media-box_text\">",
+			"<view class=\"weui-media-box__title weui-media-box__title_in-text\">$title</view>",
+			"<view class=\"weui-media-box__desc\">$desc</view>",
+			"</view>",
+			"<view class=\"weui-media-box__info\">",
+			"<view class=\"weui-media-box__info__meta\">$info</view>",
+			"</view>"
+		],
+		"description": ""
+	},
+	"weui-msg": {
+		"prefix": "weui-msg",
+		"body": [
+			"<view class=\"weui-msg\">",
+			"<view class=\"weui-msg__icon-area\">",
+			"<icon type=\"$type\" size=\"93\"></icon>",
+			"</view>",
+			"<view class=\"weui-msg__text-area\">",
+			"<view class=\"weui-msg__title\">$title</view>",
+			"<view class=\"weui-msg__desc\">$desc<navigator url=\"\" class=\"weui-msg__link\">$link</navigator></view>",
+			"</view>",
+			"<view class=\"weui-msg__opr-area\">",
+			"<view class=\"weui-btn-area\">",
+			"<button class=\"weui-btn\" type=\"primary\"></button>",
+			"<button class=\"weui-btn\" type=\"default\"></button>",
+			"</view>",
+			"</view>",
+			"<view class=\"weui-msg__extra-area\">",
+			"",
+			"</view>",
+			"</view>"
+		],
+		"description": ""
+	},
+	"weui-navbar": {
+		"prefix": "weui-navbar",
+		"body": [
+			"<view class=\"weui-tab\">",
+			"<view class=\"weui-navbar\">",
+			"<block wx:for-items=\"{{tabs}}\">",
+			"<view id=\"{{index}}\" class=\"weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}\" bindtap=\"tabClick\">",
+			"<view class=\"weui-navbar__title\">{{item}}</view>",
+			"</view>",
+			"</block>",
+			"<view class=\"weui-navbar__slider\" style=\"left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);\"></view>",
+			"</view>",
+			"<view class=\"weui-tab__panel\">",
+			"<view class=\"weui-tab__content\" hidden=\"{{activeIndex != 0}}\">",
+			"",
+			"</view>",
+			"<view class=\"weui-tab__content\" hidden=\"{{activeIndex != 1}}\">",
+			"",
+			"</view>",
+			"</view>",
+			"</view>"
+		],
+		"description": ""
+	},
+	"weui-searchbar": {
+		"prefix": "weui-searchbar",
+		"body": [
+			"<view class=\"weui-search-bar\">",
+			"<view class=\"weui-search-bar__form\">",
+			"<view class=\"weui-search-bar__box\">",
+			"<icon class=\"weui-icon-search_in-box\" type=\"search\" size=\"14\"></icon>",
+			"<input type=\"text\" class=\"weui-search-bar__input\" placeholder=\"请输入关键字\" bindinput=\"\" />",
+			"</view>",
+			"</view>",
+			"<view class=\"weui-search-bar__cancel-btn\" bindtap=\"search\">查询</view>",
+			"</view>"
+		],
+		"description": ""
+	}
+}
