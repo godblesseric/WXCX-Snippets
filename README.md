@@ -4,7 +4,7 @@
 
 放在/Users/用户名/.vscode/extensions/目录下
 
-### 触发命令：**wx / weui / cvs**
+### 触发命令：**cx / weui / cvs**
 ### 组成
 | snippet | 对应 |
 | -----|----:|
