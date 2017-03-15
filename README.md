@@ -2,7 +2,7 @@
 
 ### 使用
 
-放在/Users/用户名/.vscode/extensions/目录下（Mac）
+放在/Users/用户名/.vscode/extensions/目录下
 
 ### 触发命令：**wx / weui / cvs**
 ### 组成
